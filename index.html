@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>燕師大美食地圖</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Noto+Serif+TC:wght@400;900&family=Yusei+Magic&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="text-primary">美食地圖</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="./about.html" class="nav-item nav-link">ABOUT</a>
+                <a href="./shop.html" class="nav-item nav-link">SHOP</a>
+            </div>
+            <a href="index.html" class="navbar-brand bg-primary py-2 px-4 mx-3 d-none d-lg-block">
+                <h1 class="text-white" style="font-weight: 500;">美食地圖</h1>
+            </a>
+            <div class="navbar-nav me-auto py-0">
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">MENU</a>
+                    <div class="dropdown-menu rounded-0 shadow-sm border-0 m-0">
+                        <a href="fastfood.html" class="dropdown-item">FASTFOOD</a>
+                        <a href="./rice.html" class="dropdown-item">RICE</a>
+                        <a href="./noodle.html" class="dropdown-item">NOODLE</a>
+                        <a href="./others.html" class="dropdown-item">OTHERS</a>
+                    </div>
+                </div>
+                <a href="./index.html" class="nav-item nav-link"><img src="./img/home2.png" width="25px" height="25px" class="homeIcon"></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid hero-header bg-light py-5 mb-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <p class="text-primary text-uppercase mb-2 animated slideInDown">歡迎來到燕師大美食地圖</p>
+                    <h1 class="display-4 mb-3 animated slideInDown" style="font-family: 'Klee One', cursive;">這是一款匯集高師大燕巢校區學生常吃餐廳的網站</h1>
+                    <p class="animated slideInDown">身為「燕師大」的學生常常需要到鄰近地區覓食，本網站蒐集了學生們常吃的店家資訊，提供給正在煩惱三餐要吃什麼的YOU！</p>
+                    <div class="d-flex align-items-center pt-4 animated slideInDown">
+                        <a href="#keepUpdating" class="btn btn-primary py-3 px-4 me-5">了解更多</a>
+                        <h5 class="ms-4 mb-0 d-none d-sm-block" style="margin-right: 24px;">♥~(*´◒`* )</h5>
+                        <button type="button" class="btn-play" data-bs-toggle="modal"
+                            data-src="https://www.youtube.com/embed/9C9BeQkJMdU" data-bs-target="#videoModal">
+                            <span></span>
+                        </button>
+                        <h5 class="ms-4 mb-0 d-none d-sm-block">( *´◒`*)~♥</h5>
+                    </div>
+                </div>
+                <div class="col-lg-6 animated fadeIn">
+                    <div class="row g-3">
+                        <div class="col-6 text-end">
+                            <img class="img-fluid bg-white p-3 w-100 mb-3" src="img/food2.jpg" alt="">
+                            <img class="img-fluid bg-white p-3 w-50" src="img/food1.jpg" alt="">
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fluid bg-white p-3 w-50 mb-3" src="img/food4.jpg" alt="">
+                            <img class="img-fluid bg-white p-3 w-100" src="img/food3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Video Modal Start -->
+    <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel" style="font-weight: 300;">同場加映炸蝦生存戰:)</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- 16:9 aspect ratio -->
+                    <div class="ratio ratio-16x9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                            allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
+
+
+    <!-- About Start -->
+    <!-- <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="row g-3 img-twice position-relative h-100">
+                        <div class="col-6">
+                            <img class="img-fluid bg-light p-3" src="img/about-1.jpg" alt="">
+                        </div>
+                        <div class="col-6 align-self-end">
+                            <img class="img-fluid bg-light p-3" src="img/about-2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="h-100">
+                        <p class="text-primary text-uppercase mb-2">About Us</p>
+                        <h1 class="display-6 mb-4">We Are Creative And Professional Photographer</h1>
+                        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                        <div class="row g-2 mb-4">
+                            <div class="col-sm-6">
+                                <i class="fa fa-check text-primary me-3"></i>Quality Products
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fa fa-check text-primary me-3"></i>Custom Products
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fa fa-check text-primary me-3"></i>Online Order
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="fa fa-check text-primary me-3"></i>Home Delivery
+                            </div>
+                        </div>
+                        <a class="btn btn-primary py-3 px-5" href="">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- About End -->
+
+
+    <!-- Facts Start -->
+    <div class="container-xxl py-5" id="keepUpdating">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="text-primary text-uppercase mb-2">持續更新!</p>
+                <h1 class="display-6 mb-5" style="font-weight: 500;">我們目前匯集的店家數如下</h1>
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-3 col-md-6 pt-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="fact-item bg-light text-center h-100 p-5">
+                        <h1 class="display-2 text-primary mb-3" data-toggle="counter-up">5</h1>
+                        <h4 class="mb-3">燕巢區</h4>
+                        <span>包含校<b>內</b>餐廳、高科、樹德周遭和<br>燕<b>巢</b>市區的餐廳</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="fact-item bg-light text-center h-100 p-5">
+                        <h1 class="display-2 text-primary mb-3" data-toggle="counter-up">14</h1>
+                        <h4 class="mb-3">大社區</h4>
+                        <span>離學校第二近的覓食好去處<br>統整了許多學生常去餐廳</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 pt-lg-5 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="fact-item bg-light text-center h-100 p-5">
+                        <h1 class="display-2 text-primary mb-3" data-toggle="counter-up">4</h1>
+                        <h4 class="mb-3">楠梓區</h4>
+                        <span>擁有麥當當和肯德基的鬧區<br>來這裡換個口味<b>吧</b></span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 pt-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="fact-item bg-light text-center h-100 p-5">
+                        <h1 class="display-2 text-primary mb-3" data-toggle="counter-up">3</h1>
+                        <h4 class="mb-3">里港區</h4>
+                        <span>走走走<br>來去隔壁鄰居家吃飯!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl bg-light py-5 my-5" style="margin-bottom: 0px !important;">
+        <div class="container py-5">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="text-primary text-uppercase mb-2">本日精選</p>
+                <h1 class="display-6 mb-4" style="font-weight: 500;">來看看今日的推薦的店家</h1>
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column bg-white p-3 pb-0">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/rice.jpg" alt="">
+                            <div class="service-overlay">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href="./rice.html#todayRice"><i class="fa fa-link text-primary"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h4>想吃飯?</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 pt-lg-5 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column bg-white p-3 pb-0">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/noodle.jpg" alt="">
+                            <div class="service-overlay">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href="./noodle.html#todayNoodle"><i class="fa fa-link text-primary"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h4>想吃麵?</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item d-flex flex-column bg-white p-3 pb-0">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/fastfood.jpg" alt="">
+                            <div class="service-overlay">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href="./fastfood.html#todayFastfood"><i class="fa fa-link text-primary"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h4>想吃速食店?</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 pt-lg-5 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item d-flex flex-column bg-white p-3 pb-0">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/all.png" alt="">
+                            <div class="service-overlay">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href="./others.html#todayOthers"><i class="fa fa-link text-primary"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h4>我全都要!!</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Project Start -->
+    <!-- <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="text-primary text-uppercase mb-2">Our Works</p>
+                <h1 class="display-6 mb-0">Discover Our Unique And Creative Photoshoot</h1>
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <div class="project-item">
+                                <img class="img-fluid" src="img/project-5.jpg" alt="">
+                                <a class="project-title h5 mb-0" href="img/project-5.jpg" data-lightbox="project">
+                                    Memory
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="project-item">
+                                <img class="img-fluid" src="img/project-1.jpg" alt="">
+                                <a class="project-title h5 mb-0" href="img/project-1.jpg" data-lightbox="project">
+                                    Wedding
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <div class="project-item">
+                                <img class="img-fluid" src="img/project-2.jpg" alt="">
+                                <a class="project-title h5 mb-0" href="img/project-2.jpg" data-lightbox="project">
+                                    Portrait
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="project-item">
+                                <img class="img-fluid" src="img/project-6.jpg" alt="">
+                                <a class="project-title h5 mb-0" href="img/project-6.jpg" data-lightbox="project">
+                                    Travel
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <div class="project-item">
+                                <img class="img-fluid" src="img/project-7.jpg" alt="">
+                                <a class="project-title h5 mb-0" href="img/project-7.jpg" data-lightbox="project">
+                                    Wedding
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="project-item">
+                                <img class="img-fluid" src="img/project-3.jpg" alt="">
+                                <a class="project-title h5 mb-0" href="img/project-3.jpg" data-lightbox="project">    
+                                    Memory
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <div class="project-item">
+                                <img class="img-fluid" src="img/project-4.jpg" alt="">
+                                <a class="project-title h5 mb-0" href="img/project-4.jpg" data-lightbox="project">
+                                    Fashion
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="project-item">
+                                <img class="img-fluid" src="img/project-8.jpg" alt="">
+                                <a class="project-title h5 mb-0" href="img/project-8.jpg" data-lightbox="project">
+                                    Portrait
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Project End -->
+
+
+    <!-- Projects Start -->
+    <!-- <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h6 class="text-primary">對於畫面品質的堅持</h6>
+                <h1 class="mb-4">Visit Our insist Projects</h1>
+            </div>
+            <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-12 text-center">
+                    <ul class="list-inline mb-5" id="portfolio-flters">
+                        <li class="mx-2 active" data-filter="*">全部商品</li>
+                        <li class="mx-2" data-filter=".first">童話餅乾</li>
+                        <li class="mx-2" data-filter=".second">故事蛋糕</li>
+                        <li class="mx-2" data-filter=".third">手工禮盒</li>
+                        <li class="mx-2" data-filter=".forth">咪咪吐司</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-1.jpg" alt="" width="100%">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/project-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="pt-3">
+                        <p class="text-primary mb-0">Solar Panels</p>
+                        <hr class="text-primary w-25 my-2">
+                        <h5 class="lh-base">We Are pioneers of solar & renewable energy industry</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Projects End -->
+
+
+    <!-- Team Start -->
+    <!-- <div class="container-xxl px-0 py-5">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <p class="text-primary text-uppercase mb-2">Our Team</p>
+            <h1 class="display-6 mb-0">Creative Photograher And Videographer</h1>
+        </div>
+        <div class="row g-0">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="row g-0 flex-sm-row">
+                    <div class="col-sm-6">
+                        <div class="team-img position-relative">
+                            <img class="img-fluid" src="img/team-1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="h-100 p-5 d-flex flex-column justify-content-between">
+                            <div class="mb-3">
+                                <h4>Lucifer Jhones</h4>
+                                <span>Photographer</span>
+                            </div>
+                            <p>Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo</p>
+                            <div class="d-flex">
+                                <a class="btn btn-square btn-outline-primary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-outline-primary rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-outline-primary rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
+                <div class="row g-0 flex-sm-row-reverse flex-lg-row">
+                    <div class="col-sm-6">
+                        <div class="team-img position-relative">
+                            <img class="img-fluid" src="img/team-2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="h-100 p-5 d-flex flex-column justify-content-between">
+                            <div class="mb-3">
+                                <h4>Jesse Joslin</h4>
+                                <span>Videographer</span>
+                            </div>
+                            <p>Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo</p>
+                            <div class="d-flex">
+                                <a class="btn btn-square btn-outline-primary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-outline-primary rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-outline-primary rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="row g-0 flex-lg-row-reverse">
+                    <div class="col-sm-6">
+                        <div class="team-img position-relative">
+                            <img class="img-fluid" src="img/team-3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="h-100 p-5 d-flex flex-column justify-content-between">
+                            <div class="mb-3">
+                                <h4>Richard Archer</h4>
+                                <span>Retoucher</span>
+                            </div>
+                            <p>Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo</p>
+                            <div class="d-flex">
+                                <a class="btn btn-square btn-outline-primary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-outline-primary rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-outline-primary rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
+                <div class="row g-0 flex-sm-row-reverse">
+                    <div class="col-sm-6">
+                        <div class="team-img position-relative">
+                            <img class="img-fluid" src="img/team-4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="h-100 p-5 d-flex flex-column justify-content-between">
+                            <div class="mb-3">
+                                <h4>April Ryan</h4>
+                                <span>Editor</span>
+                            </div>
+                            <p>Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo</p>
+                            <div class="d-flex">
+                                <a class="btn btn-square btn-outline-primary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-outline-primary rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-outline-primary rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <!-- <div class="container-xxl bg-light py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="text-primary text-uppercase mb-2">Client's Review</p>
+                <h1 class="display-6 mb-0">More Than 20000+ Customers Trusted Us</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/testimonial-1.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                    </div>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/testimonial-2.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                    </div>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/testimonial-3.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                    </div>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/testimonial-4.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                    </div>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer position-relative bg-dark text-white-50 mt-5 py-5 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 0px !important;">
+        <div class="row g-5 py-5">
+            <div class="col-lg-6 pe-lg-5">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="display-5 text-primary" style="font-weight: 500;">燕師大美食地圖</h1>
+                </a>
+                <p>國立高雄師範大學有兩個校區，一個位在苓雅區的和平校區，<b>另</b>一個是位在燕<b>巢</b>區的燕<b>巢</b>校區。與身在鬧區的和平校區不同，在燕<b>巢</b>的學生<b>每</b>天都要為了<b>伙</b>食而奮鬥著。</p>
+                <p><i class="fa fa-map-marker-alt me-2"></i>高雄市燕<b>巢</b>區深中路62號</p>
+                <p><i class="fa fa-phone-alt me-2"></i>077172930</p>
+                <!-- <p><i class="fa fa-envelope me-2"></i>info@example.com</p> -->
+                <div class="d-flex justify-content-start mt-4">
+                    <!-- <a class="btn btn-square btn-outline-primary rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a> -->
+                    <a class="btn btn-square btn-outline-primary rounded-circle me-2" href="https://w3.nknu.edu.tw/zh/" target="_blank"><img src="/img/nknu_logo_02.png" width="100%"></a>
+                    <a class="btn btn-square btn-outline-primary rounded-circle me-2" href="https://www.facebook.com/nknu2015/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <!-- <a class="btn btn-square btn-outline-primary rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a> -->
+                    <a class="btn btn-square btn-outline-primary rounded-circle me-2" href="https://www.instagram.com/2015nknucc/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6 ps-lg-5">
+                <div class="row g-5">
+                    <div class="col-sm-6">
+                        <h4 class="text-light mb-4">快速連結</h4>
+                        <a class="btn btn-link" href="./about.html">關於本網站</a>
+                        <a class="btn btn-link" href="./shop.html">找店家</a>
+                        <a class="btn btn-link" href="./rice.html">吃飯</a>
+                        <a class="btn btn-link" href="./noodle.html">吃麺</a>
+                        <a class="btn btn-link" href="./others.html">其他</a>
+                    </div>
+                    <div class="col-sm-6" style="text-align: center;">
+                        <h4 class="text-light mb-4">Let's party!</h4>
+                        <!-- <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Our Services</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                        <a class="btn btn-link" href="">Support</a> -->
+                        <a href="https://www.youtube.com/watch?v=hQQhhdBiH2k" target="_blank"><img src="./img/party parrot.gif"></a>
+                    </div>
+                    <!-- <div class="col-sm-12">
+                        <h4 class="text-light mb-4">Newsletter</h4>
+                        <div class="w-100">
+                            <div class="input-group">
+                                <input type="text" class="form-control border-0 bg-secondary" style="padding: 20px 30px;" placeholder="Your Email Address"><button class="btn btn-primary px-4">Sign Up</button>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid bg-dark text-white border-top border-secondary px-0">
+        <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div class="py-4 px-5 text-center text-md-start">
+                <p class="mb-0">&copy; <a class="text-primary" href="https://github.com/Joy-Yin">燕師大美食地圖</a>. All Rights Reserved.</p>
+            </div>
+            <div class="py-4 px-5 bg-secondary footer-shape position-relative text-center text-md-end">
+                <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                <p class="mb-0">Designed by <a class="text-primary fw-bold" href="https://htmlcodex.com">HTML Codex</a></p>  
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

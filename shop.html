@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>燕師大美食地圖</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="./img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Noto+Serif+TC:wght@400;900&family=Yusei+Magic&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="text-primary">美食地圖</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="./about.html" class="nav-item nav-link">ABOUT</a>
+                <a href="./shop.html" class="nav-item nav-link active">SHOP</a>
+            </div>
+            <a href="index.html" class="navbar-brand bg-primary py-2 px-4 mx-3 d-none d-lg-block">
+                <h1 class="text-white" style="font-weight: 500;">美食地圖</h1>
+            </a>
+            <div class="navbar-nav me-auto py-0">
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">MENU</a>
+                    <div class="dropdown-menu rounded-0 shadow-sm border-0 m-0">
+                        <a href="fastfood.html" class="dropdown-item">FASTFOOD</a>
+                        <a href="./rice.html" class="dropdown-item">RICE</a>
+                        <a href="./noodle.html" class="dropdown-item">NOODLE</a>
+                        <a href="./others.html" class="dropdown-item">OTHERS</a>
+                    </div>
+                </div>
+                <a href="./index.html" class="nav-item nav-link"><img src="./img/home1.png" width="25px" height="25px" class="homeIcon"></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid hero-header bg-light py-5 mb-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 mb-3 animated slideInDown">SHOP</h1>
+                    <nav aria-label="breadcrumb animated slideInDown">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="./index.html">HOME</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">SHOP</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 animated fadeIn">
+                    <div class="row g-3">
+                        <div class="col-12 text-end">
+                            <img class="img-fluid bg-white p-3 w-100" src="img/restaurant.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Service Start -->
+    <!-- <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="text-primary text-uppercase mb-2">Our Services</p>
+                <h1 class="display-6 mb-4">We Provide Best Professional Services</h1>
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column bg-light p-3 pb-0">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/service-1.jpg" alt="">
+                            <div class="service-overlay">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href=""><i class="fa fa-link text-primary"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h4>Weddings</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 pt-lg-5 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column bg-light p-3 pb-0">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/service-2.jpg" alt="">
+                            <div class="service-overlay">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href=""><i class="fa fa-link text-primary"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h4>Portraits</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item d-flex flex-column bg-light p-3 pb-0">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/service-3.jpg" alt="">
+                            <div class="service-overlay">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href=""><i class="fa fa-link text-primary"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h4>Fashion</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 pt-lg-5 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item d-flex flex-column bg-light p-3 pb-0">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/service-4.jpg" alt="">
+                            <div class="service-overlay">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href=""><i class="fa fa-link text-primary"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h4>Editorial</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Service End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="text-primary text-uppercase mb-2">燕<b>巢</b>區</p>
+                <h1 class="display-6 mb-0" style="font-weight: 500;">店鋪資訊</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/燕巢1.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">來伊ㄚ麺の屋</h5>
+                            <!-- <span>Profession</span> -->
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：週日～週五10:00～19:30<br>公休日：週六</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./noodle.html"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/燕巢2.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">豫園上海湯包</h5>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：<b>每</b>日11:00～19:30</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./others.html#meal"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/燕巢3.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">深水早餐</h5>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：週一～週六05:00～13:30<br>公休日：週日</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./others.html#breakfast"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/燕巢4.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">膳串燒</h5>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：週三20:00～00:00</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./others.html#meal"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/燕巢5.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">乾媽</h5>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：無資料</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./rice.html"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="text-primary text-uppercase mb-2">大社區</p>
+                <h1 class="display-6 mb-0" style="font-weight: 500;">店鋪資訊</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/大社1.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">my吐司</h5>
+                            <!-- <span>Profession</span> -->
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：<b>每</b>日18:00～01:30</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./others.html#breakfast"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/大社3.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">旺堡</h5>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：<b>每</b>日06:00～13:30</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./others.html#breakfast"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/大社4.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">大亨牛排</h5>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：週二～週五10:00～14:00、<br>&emsp;&emsp;&emsp;&emsp;&emsp;16:00～21:00<br>&emsp;&emsp;&emsp;&emsp;&emsp;六日：10:00～21:00<br>公休日：週一</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./others.html#meal"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/大社5.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">壹顆壽司</h5>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：週日～週五16:00～21:00<br>公休日：週六</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./others.html#meal"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/大社6.jfif" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">日十</h5>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：週二～週五06:30～13:00、<br>&emsp;&emsp;&emsp;&emsp;&emsp;六日：07:00～13:30<br>公休日：週一</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./others.html#breakfast"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/大社7.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">陳麻飯</h5>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：週一～週六10:30～14:00、<br>&emsp;&emsp;&emsp;&emsp;&emsp;16:00～20:00<br>公休日：週日</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./rice.html"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/大社8.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">阿ㄆㄧㄚˋ碳烤吐司</h5>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：週日～週五16:30～02:00<br>公休日：週六</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./others.html#breakfast"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/大社9.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">莫尼</h5>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：<b>每</b>日06:00～14:00<br>公休日：週二</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./others.html#breakfast"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/大社10.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">原塊屋</h5>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：<b>每</b>日11:00～14:30、17:00～21:00</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./others.html#meal"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/大社11.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">好窩</h5>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：週日～週五17:00～00:00<br>公休日：週六</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./rice.html"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/大社12.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">牛匠太郎</h5>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：<b>每</b>日11:30～21:00</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./rice.html"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/大社13.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">大社在地人鹽水雞</h5>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：週一～週五16:30～23:00<br>公休日：六日</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./others.html#meal"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/大社14.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">天香麵館</h5>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：<b>每</b>日10:00～21:30</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./noodle.html"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/大社15.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">大成館</h5>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：週一～週六11:00～14:00、<br>&emsp;&emsp;&emsp;&emsp;&emsp;17:00～20:30<br>公休日：週日</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./noodle.html"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="text-primary text-uppercase mb-2">楠梓區+里港區</p>
+                <h1 class="display-6 mb-0" style="font-weight: 500;">店鋪資訊</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/楠梓1.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">6吋盤</h5>
+                            <span>楠梓</span>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：週一～週五06:30～14:00、<br>&emsp;&emsp;&emsp;&emsp;&emsp;六日：07:00～14:30</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./others.html#breakfast"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/楠梓4.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">卡布</h5>
+                            <span>楠梓</span>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：<b>每</b>日11:00～14:00、17:00～21:00</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./noodle.html"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/里港1.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">晨間廚房</h5>
+                            <span>里港</span>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：<b>每</b>日06:00～13:00 (資訊可能有誤)</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./others.html#breakfast"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/里港2.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">金禾日式鍋燒</h5>
+                            <span>里港</span>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：週日～週五10:30～14:00、<br>&emsp;&emsp;&emsp;&emsp;&emsp;16:00～19:00<br>公休日：週六</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./noodle.html"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-white p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/里港3.jpg" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">熊賀拉麺</h5>
+                            <span>里港</span>
+                        </div>
+                    </div>
+                    <p class="mb-0">營業時間：<b>每</b>日10:30～13:30、<br>&emsp;&emsp;&emsp;&emsp;&emsp;17:00～20:00<br>公休日：週二</p>
+                    <div style="text-align: right;" class="see-more">
+                        <a href="./noodle.html"><i class="fas fa-chevron-circle-right"></i> see more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer position-relative bg-dark text-white-50 mt-5 py-5 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row g-5 py-5">
+            <div class="col-lg-6 pe-lg-5">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="display-5 text-primary" style="font-weight: 500;">燕師大美食地圖</h1>
+                </a>
+                <p>國立高雄師範大學有兩個校區，一個位在苓雅區的和平校區，<b>另</b>一個是位在燕<b>巢</b>區的燕<b>巢</b>校區。與身在鬧區的和平校區不同，在燕<b>巢</b>的學生<b>每</b>天都要為了<b>伙</b>食而奮鬥著。</p>
+                <p><i class="fa fa-map-marker-alt me-2"></i>高雄市燕<b>巢</b>區深中路62號</p>
+                <p><i class="fa fa-phone-alt me-2"></i>077172930</p>
+                <!-- <p><i class="fa fa-envelope me-2"></i>info@example.com</p> -->
+                <div class="d-flex justify-content-start mt-4">
+                    <!-- <a class="btn btn-square btn-outline-primary rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a> -->
+                    <a class="btn btn-square btn-outline-primary rounded-circle me-2" href="https://w3.nknu.edu.tw/zh/" target="_blank"><img src="/img/nknu_logo_02.png" width="100%"></a>
+                    <a class="btn btn-square btn-outline-primary rounded-circle me-2" href="https://www.facebook.com/nknu2015/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <!-- <a class="btn btn-square btn-outline-primary rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a> -->
+                    <a class="btn btn-square btn-outline-primary rounded-circle me-2" href="https://www.instagram.com/2015nknucc/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6 ps-lg-5">
+                <div class="row g-5">
+                    <div class="col-sm-6">
+                        <h4 class="text-light mb-4">快速連結</h4>
+                        <a class="btn btn-link" href="./about.html">關於本網站</a>
+                        <a class="btn btn-link" href="./shop.html">找店家</a>
+                        <a class="btn btn-link" href="./rice.html">吃飯</a>
+                        <a class="btn btn-link" href="./noodle.html">吃麺</a>
+                        <a class="btn btn-link" href="./others.html">其他</a>
+                    </div>
+                    <div class="col-sm-6" style="text-align: center;">
+                        <h4 class="text-light mb-4">Let's party!</h4>
+                        <!-- <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Our Services</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                        <a class="btn btn-link" href="">Support</a> -->
+                        <a href="https://www.youtube.com/watch?v=hQQhhdBiH2k" target="_blank"><img src="./img/party parrot.gif"></a>
+                    </div>
+                    <!-- <div class="col-sm-12">
+                        <h4 class="text-light mb-4">Newsletter</h4>
+                        <div class="w-100">
+                            <div class="input-group">
+                                <input type="text" class="form-control border-0 bg-secondary" style="padding: 20px 30px;" placeholder="Your Email Address"><button class="btn btn-primary px-4">Sign Up</button>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid bg-dark text-white border-top border-secondary px-0">
+        <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div class="py-4 px-5 text-center text-md-start">
+                <p class="mb-0">&copy; <a class="text-primary" href="https://github.com/Joy-Yin">燕師大美食地圖</a>. All Rights Reserved.</p>
+            </div>
+            <div class="py-4 px-5 bg-secondary footer-shape position-relative text-center text-md-end">
+                <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                <p class="mb-0">Designed by <a class="text-primary fw-bold" href="https://htmlcodex.com">HTML Codex</a></p>  
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

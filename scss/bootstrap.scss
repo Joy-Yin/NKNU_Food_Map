@@ -1,0 +1,36 @@
+/******* Customized Bootstrap ********/
+
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&swap');
+
+$primary: #EAA636;
+$secondary: #545454;
+$light: #FDF5EB;
+$dark: #1E1916;
+
+$font-family-base: 'Yusei Magic', sans-serif;
+
+$headings-font-family: 'Yusei Magic', sans-serif;
+
+$font-family-sans-serif:$font-family-base;
+
+$body-color: $secondary;
+
+$headings-color: $dark;
+
+$headings-font-weight: 600;
+
+$display-font-weight: 700;
+
+$enable-responsive-font-sizes: true;
+
+$border-radius: 6px;
+
+$border-radius-sm: $border-radius;
+
+$border-radius-lg: $border-radius;
+
+$link-decoration: none;
+
+$enable-negative-margins: true;
+
+@import "bootstrap/scss/bootstrap";
