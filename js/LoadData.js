@@ -1207,9 +1207,13 @@ const checkboxesExample = {
 };
 
 //Step2 進行搜尋並顯示結果
-showSearchResult(checkboxesExample);
+const resultIds = getSearchResultIds(checkboxesExample);
+// for (let resultId of resultIds) {
+//     console.log(restaurantsMap.get(resultId));
+// }
 
-function showSearchResult(checkboxes) {
+
+function getSearchResultIds(checkboxes) {
 
     //Step2-1 獲取勾選項目 => 模擬建立資料庫query字串  (tags=XXX OR tags=XXX) AND (tags=XXX OR tags=XXX)
     function getCheckboxes(tagType) {
@@ -1240,7 +1244,6 @@ function showSearchResult(checkboxes) {
 
 
         let placeSearchSet = new Set();
-        let mealSearchSet = new Set();
         let fooodSearchSet = new Set();
 
         for (let tag of tags) {
@@ -1269,8 +1272,5 @@ function showSearchResult(checkboxes) {
         return matchedRestaurantsId;
     }
 
-    const matchedRestaurantsId = getMatchedRestaurants();
-    for (let restaurantId of matchedRestaurantsId) {
-        console.log(restaurantsMap.get(restaurantId));
-    }
+    return getMatchedRestaurants();
 }
