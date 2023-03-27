@@ -314,10 +314,6 @@ const tags = [{
     },
     {
         restaurantId: "00001",
-        tag: "飲料"
-    },
-    {
-        restaurantId: "00001",
         tag: "炸物"
     },
     {
@@ -339,10 +335,6 @@ const tags = [{
     {
         restaurantId: "00002",
         tag: "吐司漢堡"
-    },
-    {
-        restaurantId: "00002",
-        tag: "飲料"
     },
     {
         restaurantId: "00002",
@@ -376,11 +368,6 @@ const tags = [{
         tag: "炸物"
     },
     {
-        restaurantId: "00003",
-        tag: "飲料"
-    },
-
-    {
         restaurantId: "00004",
         tag: "大社"
     },
@@ -435,10 +422,6 @@ const tags = [{
     {
         restaurantId: "00006",
         tag: "炸物"
-    },
-    {
-        restaurantId: "00006",
-        tag: "飲料"
     },
     {
         restaurantId: "00007",
@@ -489,10 +472,6 @@ const tags = [{
         tag: "炸物"
     },
     {
-        restaurantId: "00008",
-        tag: "飲料"
-    },
-    {
         restaurantId: "00009",
         tag: "大社"
     },
@@ -517,10 +496,6 @@ const tags = [{
         tag: "吐司漢堡"
     },
     {
-        restaurantId: "00009",
-        tag: "飲料"
-    },
-    {
         restaurantId: "00010",
         tag: "大社"
     },
@@ -559,10 +534,6 @@ const tags = [{
     {
         restaurantId: "00011",
         tag: "炸物"
-    },
-    {
-        restaurantId: "00011",
-        tag: "飲料"
     },
     {
         restaurantId: "00012",
@@ -651,10 +622,6 @@ const tags = [{
     {
         restaurantId: "00015",
         tag: "炸物"
-    },
-    {
-        restaurantId: "00015",
-        tag: "飲料"
     },
     {
         restaurantId: "00016",
@@ -709,10 +676,6 @@ const tags = [{
         tag: "炸物"
     },
     {
-        restaurantId: "00017",
-        tag: "飲料"
-    },
-    {
         restaurantId: "00018",
         tag: "楠梓"
     },
@@ -735,10 +698,6 @@ const tags = [{
     {
         restaurantId: "00018",
         tag: "炸物"
-    },
-    {
-        restaurantId: "00018",
-        tag: "飲料"
     },
     {
         restaurantId: "00019",
@@ -874,10 +833,6 @@ const tags = [{
         tag: "炸物"
     },
     {
-        restaurantId: "00024",
-        tag: "飲料"
-    },
-    {
         restaurantId: "00025",
         tag: "里港"
     },
@@ -1154,10 +1109,6 @@ const tags = [{
         tag: "炸物"
     },
     {
-        restaurantId: "00033",
-        tag: "飲料"
-    },
-    {
         restaurantId: "00034",
         tag: "楠梓"
     },
@@ -1186,10 +1137,6 @@ const tags = [{
         tag: "炸物"
     },
     {
-        restaurantId: "00034",
-        tag: "飲料"
-    },
-    {
         restaurantId: "00035",
         tag: "楠梓"
     },
@@ -1212,10 +1159,6 @@ const tags = [{
     {
         restaurantId: "00035",
         tag: "吐司漢堡"
-    },
-    {
-        restaurantId: "00035",
-        tag: "飲料"
     },
 ];
 
@@ -1267,24 +1210,25 @@ let checkboxesInfo = {
 
 
 //Step1  進行勾選篩選項目
+//地區未勾選任一項，視為全選
 const checkboxesExample = {
     placeTags: {
-        "燕巢": true,
+        "燕巢": false,
         "大社": false,
         "楠梓": false,
-        "里港": true,
+        "里港": false,
     },
     foodTags: {
         "早餐": false,
         "午餐": false,
-        "晚餐": true,
-        "宵夜": true,
+        "晚餐": false,
+        "宵夜": false,
         "飲料": true,
-        "麵": true,
+        "麵": false,
         "飯": false,
-        "吐司漢堡": true,
-        "炸物": true,
-        "其他": true
+        "吐司漢堡": false,
+        "炸物": false,
+        "其他": false
     }
 };
 
@@ -1296,10 +1240,15 @@ function showSearchResult(checkboxes) {
     //Step2-1 獲取勾選項目 => 模擬建立資料庫query字串  (tags=XXX OR tags=XXX) AND (tags=XXX OR tags=XXX)
     function getCheckboxes(tagType) {
         let arr = [];
+        let autoAllSelectedArr = [];
         for (let optionName in checkboxes[tagType]) {
             if (checkboxes[tagType][optionName]) {
                 arr.push(optionName);
             }
+            autoAllSelectedArr.push(optionName);
+        }
+        if (arr.length == 0) {
+            arr = autoAllSelectedArr;
         }
         return arr;
     }
