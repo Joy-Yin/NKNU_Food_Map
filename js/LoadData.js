@@ -206,6 +206,79 @@ const restaurants = [{
         openingTime: "每日10:30～13:30、17:00～20:00",
         holiday: "週二"
     },
+    {
+        id: "00027",
+        name: "麻古",
+        image: ["./img/macu.png"],
+        website: "https://macutea.com.tw/upload_image/carte/menu_S.jpg",
+        openingTime: "依各分店不同",
+        holiday: null
+    },
+    {
+        id: "00028",
+        name: "迷克夏",
+        image: ["./img/milksha.png"],
+        website: "https://www.milkshoptea.com/upload/price/2211020110090000002.pdf",
+        openingTime: "依各分店不同",
+        holiday: null
+    },
+    {
+        id: "00029",
+        name: "鮮茶道",
+        image: ["./img/presotea.png"],
+        website: "http://www.presotea.com.tw/webimages/1671011424635.jpg",
+        openingTime: "依各分店不同",
+        holiday: null
+    },
+    {
+        id: "00030",
+        name: "可不可",
+        image: ["./img/kebuke.png"],
+        website: "https://www.kebuke.com/menu/",
+        openingTime: "依各分店不同",
+        holiday: null
+    },
+    {
+        id: "00031",
+        name: "回憶小時候",
+        image: ["./img/recallchildhood.jpg"],
+        website: "https://www.recallchildhood.com.tw/userfiles/images/20210126034143481.png",
+        openingTime: "依各分店不同",
+        holiday: null
+    },
+    {
+        id: "00032",
+        name: "水巷茶弄",
+        image: ["./img/cha-nung.png"],
+        website: "https://www.recallchildhood.com.tw/userfiles/images/20210126034143481.png",
+        openingTime: "依各分店不同",
+        holiday: null
+    },
+    {
+        id: "00033",
+        name: "肯德基",
+        image: ["./img/kfc2.png"],
+        website: "https://www.kfcclub.com.tw/menu/indivdual-meal?mid=8",
+        openingTime: "依各分店不同",
+        holiday: null
+    },
+    {
+        id: "00034",
+        name: "麥當勞",
+        image: ["./img/mc2.png"],
+        website: "https://yoti.life/mcdonalds-menu/",
+        openingTime: "依各分店不同",
+        holiday: null
+    },
+    {
+        id: "00035",
+        name: "SUBWAY",
+        image: ["./img/subway.png"],
+        website: "https://subway.com.tw/GoWeb2/include/index.html",
+        openingTime: "依各分店不同",
+        holiday: null
+    },
+
 ];
 
 const tags = [{
@@ -848,6 +921,302 @@ const tags = [{
         restaurantId: "00026",
         tag: "炸物"
     },
+    {
+        restaurantId: "00027",
+        tag: "楠梓"
+    },
+    {
+        restaurantId: "00027",
+        tag: "燕巢"
+    },
+    {
+        restaurantId: "00027",
+        tag: "大社"
+    },
+    {
+        restaurantId: "00027",
+        tag: "里港"
+    },
+    {
+        restaurantId: "00027",
+        tag: "早餐"
+    },
+    {
+        restaurantId: "00027",
+        tag: "午餐"
+    },
+    {
+        restaurantId: "00027",
+        tag: "晚餐"
+    },
+    {
+        restaurantId: "00027",
+        tag: "宵夜"
+    },
+    {
+        restaurantId: "00027",
+        tag: "飲料"
+    },
+    {
+        restaurantId: "00028",
+        tag: "燕巢"
+    },
+    {
+        restaurantId: "00028",
+        tag: "大社"
+    },
+    {
+        restaurantId: "00028",
+        tag: "楠梓"
+    },
+    {
+        restaurantId: "00028",
+        tag: "里港"
+    },
+    {
+        restaurantId: "00028",
+        tag: "早餐"
+    },
+    {
+        restaurantId: "00028",
+        tag: "午餐"
+    },
+    {
+        restaurantId: "00028",
+        tag: "晚餐"
+    },
+    {
+        restaurantId: "00028",
+        tag: "宵夜"
+    },
+    {
+        restaurantId: "00028",
+        tag: "飲料"
+    },
+    {
+        restaurantId: "00029",
+        tag: "燕巢"
+    },
+    {
+        restaurantId: "00029",
+        tag: "楠梓"
+    },
+    {
+        restaurantId: "00029",
+        tag: "里港"
+    },
+    {
+        restaurantId: "00029",
+        tag: "早餐"
+    },
+    {
+        restaurantId: "00029",
+        tag: "午餐"
+    },
+    {
+        restaurantId: "00029",
+        tag: "晚餐"
+    },
+    {
+        restaurantId: "00029",
+        tag: "宵夜"
+    },
+    {
+        restaurantId: "00029",
+        tag: "飲料"
+    },
+    {
+        restaurantId: "00030",
+        tag: "大社"
+    },
+    {
+        restaurantId: "00030",
+        tag: "楠梓"
+    },
+    {
+        restaurantId: "00030",
+        tag: "早餐"
+    },
+    {
+        restaurantId: "00030",
+        tag: "午餐"
+    },
+    {
+        restaurantId: "00030",
+        tag: "晚餐"
+    },
+    {
+        restaurantId: "00030",
+        tag: "宵夜"
+    },
+    {
+        restaurantId: "00030",
+        tag: "飲料"
+    },
+    {
+        restaurantId: "00031",
+        tag: "燕巢"
+    },
+    {
+        restaurantId: "00031",
+        tag: "大社"
+    },
+    {
+        restaurantId: "00031",
+        tag: "楠梓"
+    },
+    {
+        restaurantId: "00031",
+        tag: "里港"
+    },
+    {
+        restaurantId: "00031",
+        tag: "早餐"
+    },
+    {
+        restaurantId: "00031",
+        tag: "午餐"
+    },
+    {
+        restaurantId: "00031",
+        tag: "晚餐"
+    },
+    {
+        restaurantId: "00031",
+        tag: "宵夜"
+    },
+    {
+        restaurantId: "00031",
+        tag: "飲料"
+    },
+    {
+        restaurantId: "00032",
+        tag: "大社"
+    },
+    {
+        restaurantId: "00032",
+        tag: "楠梓"
+    },
+    {
+        restaurantId: "00032",
+        tag: "里港"
+    },
+    {
+        restaurantId: "00032",
+        tag: "早餐"
+    },
+    {
+        restaurantId: "00032",
+        tag: "午餐"
+    },
+    {
+        restaurantId: "00032",
+        tag: "晚餐"
+    },
+    {
+        restaurantId: "00032",
+        tag: "宵夜"
+    },
+    {
+        restaurantId: "00032",
+        tag: "飲料"
+    },
+    {
+        restaurantId: "00033",
+        tag: "楠梓"
+    },
+    {
+        restaurantId: "00033",
+        tag: "早餐"
+    },
+    {
+        restaurantId: "00033",
+        tag: "午餐"
+    },
+    {
+        restaurantId: "00033",
+        tag: "晚餐"
+    },
+    {
+        restaurantId: "00033",
+        tag: "宵夜"
+    },
+    {
+        restaurantId: "00033",
+        tag: "飯"
+    },
+    {
+        restaurantId: "00033",
+        tag: "吐司漢堡"
+    },
+    {
+        restaurantId: "00033",
+        tag: "炸物"
+    },
+    {
+        restaurantId: "00033",
+        tag: "飲料"
+    },
+    {
+        restaurantId: "00034",
+        tag: "楠梓"
+    },
+    {
+        restaurantId: "00034",
+        tag: "早餐"
+    },
+    {
+        restaurantId: "00034",
+        tag: "午餐"
+    },
+    {
+        restaurantId: "00034",
+        tag: "晚餐"
+    },
+    {
+        restaurantId: "00034",
+        tag: "宵夜"
+    },
+    {
+        restaurantId: "00034",
+        tag: "吐司漢堡"
+    },
+    {
+        restaurantId: "00034",
+        tag: "炸物"
+    },
+    {
+        restaurantId: "00034",
+        tag: "飲料"
+    },
+    {
+        restaurantId: "00035",
+        tag: "楠梓"
+    },
+    {
+        restaurantId: "00035",
+        tag: "早餐"
+    },
+    {
+        restaurantId: "00035",
+        tag: "午餐"
+    },
+    {
+        restaurantId: "00035",
+        tag: "晚餐"
+    },
+    {
+        restaurantId: "00035",
+        tag: "宵夜"
+    },
+    {
+        restaurantId: "00035",
+        tag: "吐司漢堡"
+    },
+    {
+        restaurantId: "00035",
+        tag: "飲料"
+    },
 ];
 
 
@@ -855,6 +1224,7 @@ const tags = [{
 // 燕巢、大社、楠梓、里港、
 // 早餐、午餐、晚餐、宵夜、
 // 麵、飯、吐司漢堡、炸物、飲料、其他
+
 
 //暫時用map來進行搜尋與儲存
 const restaurantsMap = new Map();
@@ -868,6 +1238,34 @@ makeMap();
 
 //================================================================
 //搜尋範例
+//Step0  預設篩選項目
+let checkboxesInfo = {
+    placeTags: {
+        "燕巢": true,
+        "大社": true,
+        "楠梓": true,
+        "里港": true,
+    },
+    foodTags: {
+        "早餐": true,
+        "午餐": true,
+        "晚餐": true,
+        "宵夜": true,
+        "飲料": true,
+        "麵": true,
+        "飯": true,
+        "吐司漢堡": true,
+        "炸物": true,
+        "其他": true
+    }
+};
+
+
+
+
+
+
+
 //Step1  進行勾選篩選項目
 const checkboxesExample = {
     placeTags: {
@@ -876,18 +1274,16 @@ const checkboxesExample = {
         "楠梓": false,
         "里港": true,
     },
-    mealTags: {
+    foodTags: {
         "早餐": false,
         "午餐": false,
         "晚餐": true,
         "宵夜": true,
-    },
-    foodTags: {
+        "飲料": true,
         "麵": true,
         "飯": false,
         "吐司漢堡": true,
         "炸物": true,
-        "飲料": true,
         "其他": true
     }
 };
@@ -908,7 +1304,6 @@ function showSearchResult(checkboxes) {
         return arr;
     }
     const checkedplaceTags = getCheckboxes("placeTags");
-    const checkedmealTags = getCheckboxes("mealTags");
     const checkedfoodTags = getCheckboxes("foodTags");
 
 
@@ -935,12 +1330,6 @@ function showSearchResult(checkboxes) {
             };
 
             //(tags=XXX OR tags=XXX)
-            if (checkedmealTags.findIndex(isMatched) != -1) {
-                mealSearchSet.add(tag.restaurantId);
-                continue;
-            };
-
-            //(tags=XXX OR tags=XXX)
 
             if (checkedfoodTags.findIndex(isMatched) != -1) {
                 fooodSearchSet.add(tag.restaurantId);
@@ -950,7 +1339,7 @@ function showSearchResult(checkboxes) {
 
         //(tags=XXX OR tags=XXX) AND (tags=XXX OR tags=XXX)
         for (const rId of restaurantsMap.keys()) {
-            if (placeSearchSet.has(rId) && mealSearchSet.has(rId) && fooodSearchSet.has(rId)) {
+            if (placeSearchSet.has(rId) && fooodSearchSet.has(rId)) {
                 matchedRestaurantsId.push(rId);
             }
         }
