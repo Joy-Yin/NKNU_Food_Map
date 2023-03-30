@@ -580,3 +580,18 @@ h4, h5, .h5 {
 .see-more *:hover {
     color: var(--dark) !important;
 }
+
+#recommendImage {
+    text-align: center;
+    display: block;
+    margin:auto;
+    animation-name: changeImage;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+
+@keyframes changeImage {
+    0% {content: url(../img/rice.jpg);}
+    33% {content: url(../img/noodle.jpg);}
+    66% {content: url(../img/fastfood.jpg);}
+}
