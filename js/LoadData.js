@@ -1364,7 +1364,7 @@ console.log(checkboxesExample);
 if (checkboxesExample.placeTags == undefined) {
     Object.assign(checkboxesExample, { foodTags: { "飲料": true } });
 } else {
-    Object.assign(checkboxesExample.placeTags, { "飲料": true });
+    Object.assign(checkboxesExample.foodTags, { "飲料": true });
 }
 console.log(checkboxesExample);
 
