@@ -87,8 +87,7 @@
                     <div class="d-flex align-items-center pt-4 animated slideInDown">
                         <a href="#keepUpdating" class="btn btn-primary py-3 px-4 me-5">了解更多</a>
                         <h5 class="ms-4 mb-0 d-none d-sm-block" style="margin-right: 24px;">♥~(*´◒`* )</h5>
-                        <button type="button" class="btn-play" data-bs-toggle="modal"
-                            data-src="https://www.youtube.com/embed/9C9BeQkJMdU" data-bs-target="#videoModal">
+                        <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/9C9BeQkJMdU" data-bs-target="#videoModal">
                             <span></span>
                         </button>
                         <h5 class="ms-4 mb-0 d-none d-sm-block">( *´◒`*)~♥</h5>
@@ -123,8 +122,7 @@
                 <div class="modal-body">
                     <!-- 16:9 aspect ratio -->
                     <div class="ratio ratio-16x9">
-                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
-                            allow="autoplay"></iframe>
+                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>
                     </div>
                 </div>
             </div>
@@ -186,28 +184,28 @@
             <div class="row g-3">
                 <div class="col-lg-3 col-md-6 pt-lg-5 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="fact-item bg-light text-center h-100 p-5">
-                        <h1 class="display-2 text-primary mb-3" data-toggle="counter-up">5</h1>
+                        <h1 class="display-2 text-primary mb-3" data-toggle="counter-up" id="yanchaoCounter"></h1>
                         <h4 class="mb-3">燕巢區</h4>
                         <span>包含校<b>內</b>餐廳、高科、樹德周遭和<br>燕<b>巢</b>市區的餐廳</span>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="fact-item bg-light text-center h-100 p-5">
-                        <h1 class="display-2 text-primary mb-3" data-toggle="counter-up">14</h1>
+                        <h1 class="display-2 text-primary mb-3" data-toggle="counter-up" id="dasheCounter"></h1>
                         <h4 class="mb-3">大社區</h4>
                         <span>離學校第二近的覓食好去處<br>統整了許多學生常去餐廳</span>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 pt-lg-5 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="fact-item bg-light text-center h-100 p-5">
-                        <h1 class="display-2 text-primary mb-3" data-toggle="counter-up">4</h1>
+                        <h1 class="display-2 text-primary mb-3" data-toggle="counter-up" id="nanziCounter"></h1>
                         <h4 class="mb-3">楠梓區</h4>
                         <span>擁有麥當當和肯德基的鬧區<br>來這裡換個口味<b>吧</b></span>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 pt-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="fact-item bg-light text-center h-100 p-5">
-                        <h1 class="display-2 text-primary mb-3" data-toggle="counter-up">3</h1>
+                        <h1 class="display-2 text-primary mb-3" data-toggle="counter-up" id="ligangCounter"></h1>
                         <h4 class="mb-3">里港區</h4>
                         <span>走走走<br>來去隔壁鄰居家吃飯!</span>
                     </div>
@@ -598,7 +596,7 @@
             </div>
             <div class="py-4 px-5 bg-secondary footer-shape position-relative text-center text-md-end">
                 <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                <p class="mb-0">Designed by <a class="text-primary fw-bold" href="https://htmlcodex.com">HTML Codex</a></p>  
+                <p class="mb-0">Designed by <a class="text-primary fw-bold" href="https://htmlcodex.com">HTML Codex</a></p>
             </div>
         </div>
     </div>
@@ -607,6 +605,10 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!--Custom JavaScript-->
+    <script src="./js/LoadData.js"></script>
+    <script src="./js/index.js"></script>
 
 
     <!-- JavaScript Libraries -->

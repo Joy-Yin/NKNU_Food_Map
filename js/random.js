@@ -79,6 +79,7 @@ function loadData(){
     foodLinkAttr = document.createAttribute("href");
     foodLinkAttr.value = recommendFood.website;
     foodWebsite.setAttributeNode(foodLinkAttr);
+    foodWebsite.target = "_blank";
     foodWebsite.appendChild(document.createTextNode("GO"));
     foodArea.appendChild(foodWebsite);
 
@@ -89,6 +90,7 @@ function loadData(){
     beverageLinkAttr = document.createAttribute("href");
     beverageLinkAttr.value = recommendBeverage.website;
     beverageWebsite.setAttributeNode(beverageLinkAttr);
+    beverageWebsite.target = "_blank";
     beverageWebsite.appendChild(document.createTextNode("GO"));
     beverageArea.appendChild(beverageWebsite);
 }
