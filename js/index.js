@@ -3,24 +3,24 @@ setInitView();
 function setInitView() {
 
     const yanchaoCnt = getCountSearchResultIds({
-        queryString: "燕巢"
+        placeTags: { "燕巢": true }
     });
     document.getElementById("yanchaoCounter").innerText = yanchaoCnt;
 
     const dasheCnt = getCountSearchResultIds({
-        queryString: "大社"
+        placeTags: { "大社": true }
     });
     document.getElementById("dasheCounter").innerText = dasheCnt;
 
 
     const nanziCnt = getCountSearchResultIds({
-        queryString: "楠梓"
+        placeTags: { "楠梓": true }
     });
     document.getElementById("nanziCounter").innerText = nanziCnt;
 
 
     const ligangCnt = getCountSearchResultIds({
-        queryString: "里港"
+        placeTags: { "里港": true }
     });
     document.getElementById("ligangCounter").innerText = ligangCnt;
 
