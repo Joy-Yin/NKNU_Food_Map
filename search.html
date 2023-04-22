@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>燕師大美食地圖</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Noto+Serif+TC:wght@400;900&family=Yusei+Magic&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="text-primary">美食地圖</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="./about.html" class="nav-item nav-link">ABOUT</a>
+                <a href="./shop.html" class="nav-item nav-link">SHOP</a>
+            </div>
+            <a href="index.html" class="navbar-brand bg-primary py-2 px-4 mx-3 d-none d-lg-block">
+                <h1 class="text-white" style="font-weight: 500;">美食地圖</h1>
+            </a>
+            <div class="navbar-nav me-auto py-0">
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">MENU</a>
+                    <div class="dropdown-menu rounded-0 shadow-sm border-0 m-0">
+                        <a href="fastfood.html" class="dropdown-item">FASTFOOD</a>
+                        <a href="./rice.html" class="dropdown-item">RICE</a>
+                        <a href="./noodle.html" class="dropdown-item active">NOODLE</a>
+                        <a href="./others.html" class="dropdown-item">OTHERS</a>
+                    </div>
+                </div>
+                <!-- <a href="./index.html" class="nav-item nav-link"><img src="./img/home1.png" width="25px" height="25px" class="homeIcon"></a> -->
+                <a href="./search.html" class="nav-item nav-link"><img src="./img/search.png" width="30px" height="30px" class="searchIcon"></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid hero-header bg-light py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 mb-3 animated slideInDown">SEARCH</h1>
+                    <nav aria-label="breadcrumb animated slideInDown">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="./index.html">HOME</a></li>
+                            <li class="breadcrumb-item"><a href="#">MENU</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">SEARCH</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 animated fadeIn">
+                    <div class="row g-3">
+                        <div class="col-12 text-end">
+                            <img class="img-fluid bg-white p-3 w-100" src="img/search_photo.jpg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Projects Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h6 class="text-primary">不知道該吃什麼？</h6>
+                <h1 class="mb-4" style="font-weight: 500;">(☞ﾟヮﾟ)☞那就篩選一下☜(ﾟヮﾟ☜)</h1>
+            </div>
+            <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-12 text-center">
+                    <ul class="list-inline mb-5" id="portfolio-flters">
+                        <li class="mx-2 active" data-filter="*">全部</li>
+                        <li class="mx-2" data-filter=".first">燕<b>巢</b></li>
+                        <li class="mx-2" data-filter=".second">大社</li>
+                        <li class="mx-2" data-filter=".third">楠梓</li>
+                        <li class="mx-2" data-filter=".forth">里港</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/燕巢1.jpg" alt="" width="100%">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/燕巢1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="https://goo.gl/maps/RiXAiB8VoW4AMuMZA" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="pt-3">
+                        <p class="text-primary mb-0">來伊<b>ㄚ</b>麺の屋</p>
+                        <hr class="text-primary w-25 my-2">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item forth">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/里港2.jpg" alt="" width="100%">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/里港2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="https://goo.gl/maps/6XEjoTt7jCM8hnb17" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="pt-3">
+                        <p class="text-primary mb-0">金禾日式鍋燒</p>
+                        <hr class="text-primary w-25 my-2">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item forth">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/里港3.jpg" alt="" width="100%">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/里港3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="https://goo.gl/maps/pCyLmAVEZVGHh3py9" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="pt-3">
+                        <p class="text-primary mb-0">熊賀拉麺</p>
+                        <hr class="text-primary w-25 my-2">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/燕巢5.jpg" alt="" width="100%">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/燕巢5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="https://goo.gl/maps/VVv72U2UPu7UaY3h9" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="pt-3">
+                        <p class="text-primary mb-0">乾媽</p>
+                        <hr class="text-primary w-25 my-2">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/大社14.jpg" alt="" width="100%">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/大社14.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="https://goo.gl/maps/qgquuzobs5gf8vt48" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="pt-3">
+                        <p class="text-primary mb-0">天香麺館</p>
+                        <hr class="text-primary w-25 my-2">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/大社15.jpg" alt="" width="100%">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/大社15.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="https://goo.gl/maps/54ee8fAqBcLbxqtL9" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="pt-3">
+                        <p class="text-primary mb-0">大成館</p>
+                        <hr class="text-primary w-25 my-2">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item third">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/楠梓3.jpg" alt="" width="100%">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/楠梓3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="https://goo.gl/maps/uEkCzrkKVkBdzrap7" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="pt-3">
+                        <p class="text-primary mb-0"><b>卡</b>布</p>
+                        <hr class="text-primary w-25 my-2">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item third">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/楠梓4.jpg" alt="" width="100%">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="img/楠梓4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="https://goo.gl/maps/uEkCzrkKVkBdzrap7" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="pt-3">
+                        <p class="text-primary mb-0"><b>卡</b>布</p>
+                        <hr class="text-primary w-25 my-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Projects End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer position-relative bg-dark text-white-50 mt-5 py-5 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row g-5 py-5">
+            <div class="col-lg-6 pe-lg-5">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="display-5 text-primary" style="font-weight: 500;">燕師大美食地圖</h1>
+                </a>
+                <p>國立高雄師範大學有兩個校區，一個位在苓雅區的和平校區，<b>另</b>一個是位在燕<b>巢</b>區的燕<b>巢</b>校區。與身在鬧區的和平校區不同，在燕<b>巢</b>的學生<b>每</b>天都要為了<b>伙</b>食而奮鬥著。</p>
+                <p><i class="fa fa-map-marker-alt me-2"></i>高雄市燕<b>巢</b>區深中路62號</p>
+                <p><i class="fa fa-phone-alt me-2"></i>077172930</p>
+                <!-- <p><i class="fa fa-envelope me-2"></i>info@example.com</p> -->
+                <div class="d-flex justify-content-start mt-4">
+                    <!-- <a class="btn btn-square btn-outline-primary rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a> -->
+                    <a class="btn btn-square btn-outline-primary rounded-circle me-2" href="https://w3.nknu.edu.tw/zh/" target="_blank"><img src="./img/nknu_logo_02.png" width="100%"></a>
+                    <a class="btn btn-square btn-outline-primary rounded-circle me-2" href="https://www.facebook.com/nknu2015/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <!-- <a class="btn btn-square btn-outline-primary rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a> -->
+                    <a class="btn btn-square btn-outline-primary rounded-circle me-2" href="https://www.instagram.com/2015nknucc/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6 ps-lg-5">
+                <div class="row g-5">
+                    <div class="col-sm-6">
+                        <h4 class="text-light mb-4">快速連結</h4>
+                        <a class="btn btn-link" href="./about.html">關於本網站</a>
+                        <a class="btn btn-link" href="./shop.html">找店家</a>
+                        <a class="btn btn-link" href="./rice.html">吃飯</a>
+                        <a class="btn btn-link" href="./noodle.html">吃麺</a>
+                        <a class="btn btn-link" href="./others.html">其他</a>
+                    </div>
+                    <div class="col-sm-6" style="text-align: center;">
+                        <h4 class="text-light mb-4">Let's party!</h4>
+                        <!-- <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Our Services</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                        <a class="btn btn-link" href="">Support</a> -->
+                        <a href="https://www.youtube.com/watch?v=hQQhhdBiH2k" target="_blank"><img src="./img/party parrot.gif"></a>
+                    </div>
+                    <!-- <div class="col-sm-12">
+                        <h4 class="text-light mb-4">Newsletter</h4>
+                        <div class="w-100">
+                            <div class="input-group">
+                                <input type="text" class="form-control border-0 bg-secondary" style="padding: 20px 30px;" placeholder="Your Email Address"><button class="btn btn-primary px-4">Sign Up</button>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid bg-dark text-white border-top border-secondary px-0">
+        <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div class="py-4 px-5 text-center text-md-start">
+                <p class="mb-0">&copy; <a class="text-primary" href="https://github.com/Joy-Yin">燕師大美食地圖</a>. All Rights Reserved.</p>
+            </div>
+            <div class="py-4 px-5 bg-secondary footer-shape position-relative text-center text-md-end">
+                <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                <p class="mb-0">Designed by <a class="text-primary fw-bold" href="https://htmlcodex.com">HTML Codex</a></p>  
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
