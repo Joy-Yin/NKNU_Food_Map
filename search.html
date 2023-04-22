@@ -15,7 +15,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Noto+Serif+TC:wght@400;900&family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Klee+One&family=Noto+Serif+TC:wght@400;900&family=Yusei+Magic&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -36,14 +38,16 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" role="status"></div>
     </div>
     <!-- Spinner End -->
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn"
+        data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
             <h1 class="text-primary">美食地圖</h1>
         </a>
@@ -69,7 +73,8 @@
                     </div>
                 </div>
                 <!-- <a href="./index.html" class="nav-item nav-link"><img src="./img/home1.png" width="25px" height="25px" class="homeIcon"></a> -->
-                <a href="./search.html" class="nav-item nav-link"><img src="./img/search.png" width="30px" height="30px" class="searchIcon"></a>
+                <a href="./search.html" class="nav-item nav-link"><img src="./img/search.png" width="30px" height="30px"
+                        class="searchIcon"></a>
             </div>
         </div>
     </nav>
@@ -107,20 +112,83 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h6 class="text-primary">不知道該吃什麼？</h6>
-                <h1 class="mb-4" style="font-weight: 500;">(☞ﾟヮﾟ)☞那就篩選一下☜(ﾟヮﾟ☜)</h1>
+                <div class="search_title">
+                    <h6 class="text-primary">不知道該吃什麼？</h6>
+                    <h1 class="mb-4" style="font-weight: 500;">(☞ﾟヮﾟ)☞那就篩選一下☜(ﾟヮﾟ☜)</h1>
+                </div>
                 <div class="search">
                     <input type="text" class="search__input" placeholder="搜尋餐廳">
                     <button class="search__button">
                         <svg class="search__icon" aria-hidden="true" viewBox="0 0 25 25">
                             <g>
-                                <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                                <path
+                                    d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                                </path>
                             </g>
                         </svg>
                     </button>
                 </div>
             </div>
-            
+            <div class="placeTag">
+                <label class="material-checkbox">
+                    <input type="checkbox" id="燕巢">
+                    <span class="checkmark"></span>燕<b>巢</b>
+                </label>
+                <label class="material-checkbox">
+                    <input type="checkbox" id="大社">
+                    <span class="checkmark"></span>大社
+                </label>
+                <label class="material-checkbox">
+                    <input type="checkbox" id="楠梓">
+                    <span class="checkmark"></span>楠梓
+                </label>
+                <label class="material-checkbox">
+                    <input type="checkbox" id="里港">
+                    <span class="checkmark"></span>里港
+                </label>
+            </div>
+            <div class="foodTag">
+                <label class="material-checkbox">
+                    <input type="checkbox" id="早餐">
+                    <span class="checkmark"></span>早餐
+                </label>
+                <label class="material-checkbox">
+                    <input type="checkbox" id="午餐">
+                    <span class="checkmark"></span>午餐
+                </label>
+                <label class="material-checkbox">
+                    <input type="checkbox" id="晩餐">
+                    <span class="checkmark"></span>晩餐
+                </label>
+                <label class="material-checkbox">
+                    <input type="checkbox" id="宵夜">
+                    <span class="checkmark"></span>宵夜
+                </label>
+                <label class="material-checkbox">
+                    <input type="checkbox" id="麵">
+                    <span class="checkmark"></span><b>麵</b>
+                </label>
+                <label class="material-checkbox">
+                    <input type="checkbox" id="飯">
+                    <span class="checkmark"></span>飯
+                </label>
+                <label class="material-checkbox">
+                    <input type="checkbox" id="吐司漢堡">
+                    <span class="checkmark"></span>吐司漢堡
+                </label>
+                <label class="material-checkbox">
+                    <input type="checkbox" id="炸物">
+                    <span class="checkmark"></span>炸物
+                </label>
+                <label class="material-checkbox">
+                    <input type="checkbox" id="飲料">
+                    <span class="checkmark"></span>飲料
+                </label>
+                <label class="material-checkbox">
+                    <input type="checkbox" id="其他">
+                    <span class="checkmark"></span>其他
+                </label>
+            </div>
             <!-- <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="col-12 text-center">
                     <ul class="list-inline mb-5" id="portfolio-flters">
@@ -132,7 +200,7 @@
                     </ul>
                 </div>
             </div>-->
-            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.5s">
+            <!-- <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.5s">
                 <div class="col-lg-4 col-md-6 portfolio-item first">
                     <div class="portfolio-img rounded overflow-hidden">
                         <img class="img-fluid" src="img/燕巢1.jpg" alt="" width="100%">
@@ -237,29 +305,35 @@
                         <hr class="text-primary w-25 my-2">
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- Projects End -->
 
 
     <!-- Footer Start -->
-    <div class="container-fluid footer position-relative bg-dark text-white-50 mt-5 py-5 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid footer position-relative bg-dark text-white-50 mt-5 py-5 px-4 px-lg-5 wow fadeIn"
+        data-wow-delay="0.1s">
         <div class="row g-5 py-5">
             <div class="col-lg-6 pe-lg-5">
                 <a href="index.html" class="navbar-brand">
                     <h1 class="display-5 text-primary" style="font-weight: 500;">燕師大美食地圖</h1>
                 </a>
-                <p>國立高雄師範大學有兩個校區，一個位在苓雅區的和平校區，<b>另</b>一個是位在燕<b>巢</b>區的燕<b>巢</b>校區。與身在鬧區的和平校區不同，在燕<b>巢</b>的學生<b>每</b>天都要為了<b>伙</b>食而奮鬥著。</p>
+                <p>國立高雄師範大學有兩個校區，一個位在苓雅區的和平校區，<b>另</b>一個是位在燕<b>巢</b>區的燕<b>巢</b>校區。與身在鬧區的和平校區不同，在燕<b>巢</b>的學生<b>每</b>天都要為了<b>伙</b>食而奮鬥著。
+                </p>
                 <p><i class="fa fa-map-marker-alt me-2"></i>高雄市燕<b>巢</b>區深中路62號</p>
                 <p><i class="fa fa-phone-alt me-2"></i>077172930</p>
                 <!-- <p><i class="fa fa-envelope me-2"></i>info@example.com</p> -->
                 <div class="d-flex justify-content-start mt-4">
                     <!-- <a class="btn btn-square btn-outline-primary rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a> -->
-                    <a class="btn btn-square btn-outline-primary rounded-circle me-2" href="https://w3.nknu.edu.tw/zh/" target="_blank"><img src="./img/nknu_logo_02.png" width="100%"></a>
-                    <a class="btn btn-square btn-outline-primary rounded-circle me-2" href="https://www.facebook.com/nknu2015/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-square btn-outline-primary rounded-circle me-2" href="https://w3.nknu.edu.tw/zh/"
+                        target="_blank"><img src="./img/nknu_logo_02.png" width="100%"></a>
+                    <a class="btn btn-square btn-outline-primary rounded-circle me-2"
+                        href="https://www.facebook.com/nknu2015/" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <!-- <a class="btn btn-square btn-outline-primary rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a> -->
-                    <a class="btn btn-square btn-outline-primary rounded-circle me-2" href="https://www.instagram.com/2015nknucc/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-square btn-outline-primary rounded-circle me-2"
+                        href="https://www.instagram.com/2015nknucc/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="col-lg-6 ps-lg-5">
@@ -279,7 +353,8 @@
                         <a class="btn btn-link" href="">Our Services</a>
                         <a class="btn btn-link" href="">Terms & Condition</a>
                         <a class="btn btn-link" href="">Support</a> -->
-                        <a href="https://www.youtube.com/watch?v=hQQhhdBiH2k" target="_blank"><img src="./img/party parrot.gif"></a>
+                        <a href="https://www.youtube.com/watch?v=hQQhhdBiH2k" target="_blank"><img
+                                src="./img/party parrot.gif"></a>
                     </div>
                     <!-- <div class="col-sm-12">
                         <h4 class="text-light mb-4">Newsletter</h4>
@@ -300,11 +375,13 @@
     <div class="container-fluid bg-dark text-white border-top border-secondary px-0">
         <div class="d-flex flex-column flex-md-row justify-content-between">
             <div class="py-4 px-5 text-center text-md-start">
-                <p class="mb-0">&copy; <a class="text-primary" href="https://github.com/Joy-Yin">燕師大美食地圖</a>. All Rights Reserved.</p>
+                <p class="mb-0">&copy; <a class="text-primary" href="https://github.com/Joy-Yin">燕師大美食地圖</a>. All Rights
+                    Reserved.</p>
             </div>
             <div class="py-4 px-5 bg-secondary footer-shape position-relative text-center text-md-end">
                 <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                <p class="mb-0">Designed by <a class="text-primary fw-bold" href="https://htmlcodex.com">HTML Codex</a></p>  
+                <p class="mb-0">Designed by <a class="text-primary fw-bold" href="https://htmlcodex.com">HTML Codex</a>
+                </p>
             </div>
         </div>
     </div>
@@ -312,7 +389,8 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
