@@ -317,6 +317,10 @@ const tags = [{
         tag: "炸物"
     },
     {
+        restaurantId: "00001",
+        tag: "丹丹"
+    },
+    {
         restaurantId: "00002",
         tag: "大社"
     },
@@ -339,6 +343,10 @@ const tags = [{
     {
         restaurantId: "00002",
         tag: "炸物"
+    },
+    {
+        restaurantId: "00002",
+        tag: "My吐司"
     },
     {
         restaurantId: "00003",
@@ -368,6 +376,10 @@ const tags = [{
         tag: "炸物"
     },
     {
+        restaurantId: "00003",
+        tag: "旺堡"
+    },
+    {
         restaurantId: "00004",
         tag: "大社"
     },
@@ -382,6 +394,10 @@ const tags = [{
     {
         restaurantId: "00004",
         tag: "麵"
+    },
+    {
+        restaurantId: "00003",
+        tag: "大亨牛排"
     },
     {
         restaurantId: "00005",
@@ -396,6 +412,10 @@ const tags = [{
         tag: "飯"
     },
     {
+        restaurantId: "00003",
+        tag: "壹顆壽司"
+    },
+    {
         restaurantId: "00006",
         tag: "大社"
     },
@@ -422,6 +442,10 @@ const tags = [{
     {
         restaurantId: "00006",
         tag: "炸物"
+    },
+    {
+        restaurantId: "00006",
+        tag: "日十"
     },
     {
         restaurantId: "00007",
@@ -448,6 +472,10 @@ const tags = [{
         tag: "飯"
     },
     {
+        restaurantId: "00007",
+        tag: "陳麻飯"
+    },
+    {
         restaurantId: "00008",
         tag: "大社"
     },
@@ -470,6 +498,10 @@ const tags = [{
     {
         restaurantId: "00008",
         tag: "炸物"
+    },
+    {
+        restaurantId: "00008",
+        tag: "阿帕碳烤吐司"
     },
     {
         restaurantId: "00009",
@@ -496,6 +528,10 @@ const tags = [{
         tag: "吐司漢堡"
     },
     {
+        restaurantId: "00009",
+        tag: "莫尼"
+    },
+    {
         restaurantId: "00010",
         tag: "大社"
     },
@@ -514,6 +550,10 @@ const tags = [{
     {
         restaurantId: "00010",
         tag: "炸物"
+    },
+    {
+        restaurantId: "00010",
+        tag: "原塊屋"
     },
     {
         restaurantId: "00011",
@@ -536,6 +576,10 @@ const tags = [{
         tag: "炸物"
     },
     {
+        restaurantId: "00011",
+        tag: "好窩"
+    },
+    {
         restaurantId: "00012",
         tag: "大社"
     },
@@ -558,6 +602,10 @@ const tags = [{
     {
         restaurantId: "00012",
         tag: "炸物"
+    },
+    {
+        restaurantId: "00012",
+        tag: "牛匠太郎"
     },
     {
         restaurantId: "00013",
@@ -574,6 +622,10 @@ const tags = [{
     {
         restaurantId: "00013",
         tag: "其他"
+    },
+    {
+        restaurantId: "00013",
+        tag: "在地人鹽水雞"
     },
     {
         restaurantId: "00014",
@@ -600,6 +652,10 @@ const tags = [{
         tag: "其他"
     },
     {
+        restaurantId: "00014",
+        tag: "天香麵館"
+    },
+    {
         restaurantId: "00015",
         tag: "大社"
     },
@@ -622,6 +678,10 @@ const tags = [{
     {
         restaurantId: "00015",
         tag: "炸物"
+    },
+    {
+        restaurantId: "00015",
+        tag: "大成館"
     },
     {
         restaurantId: "00016",
@@ -652,6 +712,10 @@ const tags = [{
         tag: "飲料"
     },
     {
+        restaurantId: "00016",
+        tag: "心喜"
+    },
+    {
         restaurantId: "00017",
         tag: "楠梓"
     },
@@ -676,6 +740,10 @@ const tags = [{
         tag: "炸物"
     },
     {
+        restaurantId: "00017",
+        tag: "6吋盤"
+    },
+    {
         restaurantId: "00018",
         tag: "楠梓"
     },
@@ -700,6 +768,10 @@ const tags = [{
         tag: "炸物"
     },
     {
+        restaurantId: "00018",
+        tag: "卡布"
+    },
+    {
         restaurantId: "00019",
         tag: "燕巢"
     },
@@ -718,6 +790,10 @@ const tags = [{
     {
         restaurantId: "00019",
         tag: "飯"
+    },
+    {
+        restaurantId: "00019",
+        tag: "來伊ㄚ麵の屋"
     },
     {
         restaurantId: "00020",
@@ -742,6 +818,10 @@ const tags = [{
     {
         restaurantId: "00020",
         tag: "其他"
+    },
+    {
+        restaurantId: "00020",
+        tag: "豫園上海湯包"
     },
     {
         restaurantId: "00021",
@@ -771,10 +851,13 @@ const tags = [{
         restaurantId: "00021",
         tag: "其他"
     },
-
     {
         restaurantId: "00021",
         tag: "其他"
+    },
+    {
+        restaurantId: "00021",
+        tag: "深水早餐"
     },
     {
         restaurantId: "00022",
@@ -789,6 +872,10 @@ const tags = [{
         tag: "其他"
     },
     {
+        restaurantId: "00022",
+        tag: "膳串燒"
+    },
+    {
         restaurantId: "00023",
         tag: "燕巢"
     },
@@ -805,6 +892,10 @@ const tags = [{
         tag: "飯"
     },
     {
+        restaurantId: "00023",
+        tag: "乾媽"
+    },
+    {
         restaurantId: "00024",
         tag: "里港"
     },
@@ -812,6 +903,7 @@ const tags = [{
         restaurantId: "00024",
         tag: "早餐"
     },
+    
     {
         restaurantId: "00024",
         tag: "午餐"
@@ -833,6 +925,10 @@ const tags = [{
         tag: "炸物"
     },
     {
+        restaurantId: "00024",
+        tag: "晨間廚房"
+    },
+    {
         restaurantId: "00025",
         tag: "里港"
     },
@@ -850,6 +946,10 @@ const tags = [{
     },
     {
         restaurantId: "00025",
+        tag: "金禾日式鍋燒"
+    },
+    {
+        restaurantId: "00025",
         tag: "飯"
     },
     {
@@ -877,6 +977,10 @@ const tags = [{
         tag: "炸物"
     },
     {
+        restaurantId: "00026",
+        tag: "熊賀拉麺"
+    },
+    {
         restaurantId: "00027",
         tag: "楠梓"
     },
@@ -930,6 +1034,10 @@ const tags = [{
     },
     {
         restaurantId: "00028",
+        tag: "麻古"
+    },
+    {
+        restaurantId: "00028",
         tag: "早餐"
     },
     {
@@ -947,6 +1055,10 @@ const tags = [{
     {
         restaurantId: "00028",
         tag: "飲料"
+    },
+    {
+        restaurantId: "00028",
+        tag: "迷克夏"
     },
     {
         restaurantId: "00029",
@@ -981,6 +1093,10 @@ const tags = [{
         tag: "飲料"
     },
     {
+        restaurantId: "00029",
+        tag: "鮮茶道"
+    },
+    {
         restaurantId: "00030",
         tag: "大社"
     },
@@ -1007,6 +1123,10 @@ const tags = [{
     {
         restaurantId: "00030",
         tag: "飲料"
+    },
+    {
+        restaurantId: "00030",
+        tag: "可不可"
     },
     {
         restaurantId: "00031",
@@ -1045,6 +1165,10 @@ const tags = [{
         tag: "飲料"
     },
     {
+        restaurantId: "00031",
+        tag: "回憶小時候"
+    },
+    {
         restaurantId: "00032",
         tag: "大社"
     },
@@ -1075,6 +1199,10 @@ const tags = [{
     {
         restaurantId: "00032",
         tag: "飲料"
+    },
+    {
+        restaurantId: "00032",
+        tag: "水巷茶弄"
     },
     {
         restaurantId: "00033",
@@ -1109,6 +1237,10 @@ const tags = [{
         tag: "炸物"
     },
     {
+        restaurantId: "00033",
+        tag: "肯德基"
+    },
+    {
         restaurantId: "00034",
         tag: "楠梓"
     },
@@ -1137,6 +1269,10 @@ const tags = [{
         tag: "炸物"
     },
     {
+        restaurantId: "00034",
+        tag: "麥當勞"
+    },
+    {
         restaurantId: "00035",
         tag: "楠梓"
     },
@@ -1159,6 +1295,10 @@ const tags = [{
     {
         restaurantId: "00035",
         tag: "吐司漢堡"
+    },
+    {
+        restaurantId: "00035",
+        tag: "SUBWAY"
     },
 ];
 
@@ -1203,24 +1343,44 @@ const checkboxesExample = {
         "吐司漢堡": false,
         "炸物": false,
         "其他": false
-    }
+    },
+    queryString:"" //若輸入關鍵字 則可直接查找店家或是餐點類型 例如:"丹丹"、"吐司漢堡"，空字串則表示都未篩此項
 };
 
 //Step2 進行搜尋並顯示結果
 const resultIds = getSearchResultIds(checkboxesExample);
+
 // for (let resultId of resultIds) {
 //     console.log(restaurantsMap.get(resultId));
 // }
 
 
-function getSearchResultIds(checkboxes) {
+/**
+ * 回傳結果範例:
+ * [{
+        id: "00001",
+        name: "丹丹",
+        image: ["./img/丹丹2.jpg"],
+        website: "./img/丹丹2.jpg",
+        openingTime: null,
+        holiday: null
+    }, {
+        id: "00002",
+        name: "My吐司",
+        image: ["./img/大社1.jpg"],
+        website: "https://goo.gl/maps/FtGGfteCaApSfuyEA",
+        openingTime: "每日18:00～01:30",
+        holiday: null
+    },
+ */
+function getSearchResultIds(queryObj) {
 
     //Step2-1 獲取勾選項目 => 模擬建立資料庫query字串  (tags=XXX OR tags=XXX) AND (tags=XXX OR tags=XXX)
     function getCheckboxes(tagType) {
         let arr = [];
         let autoAllSelectedArr = [];
-        for (let optionName in checkboxes[tagType]) {
-            if (checkboxes[tagType][optionName]) {
+        for (let optionName in queryObj[tagType]) {
+            if (queryObj[tagType][optionName]) {
                 arr.push(optionName);
             }
             autoAllSelectedArr.push(optionName);
@@ -1237,7 +1397,7 @@ function getSearchResultIds(checkboxes) {
     //step2-2  => 模擬資料庫query 
     // SELECT DISTINCT restaurantId 
     // FROM tags
-    // WHERE (tags=XXX OR tags=XXX) AND (tags=XXX OR tags=XXX)... 
+    // WHERE (tags=XXX OR tags=XXX) AND (tags=XXX OR tags=XXX) AND (tags=="query string")... 
     function getMatchedRestaurants() {
 
         let matchedRestaurantsId = [];
@@ -1245,6 +1405,8 @@ function getSearchResultIds(checkboxes) {
 
         let placeSearchSet = new Set();
         let fooodSearchSet = new Set();
+        let queyStringSet = new Set();
+
 
         for (let tag of tags) {
             const isMatched = (checkedTag) => tag.tag == checkedTag;
@@ -1253,19 +1415,26 @@ function getSearchResultIds(checkboxes) {
             if (checkedplaceTags.findIndex(isMatched) != -1) {
                 placeSearchSet.add(tag.restaurantId);
                 continue;
-            };
+            }
 
             //(tags=XXX OR tags=XXX)
-
             if (checkedfoodTags.findIndex(isMatched) != -1) {
                 fooodSearchSet.add(tag.restaurantId);
                 continue;
             };
+
+            //(tags=queryString)
+            if (isMatched(queryObj.queryString)) {
+                queyStringSet.add(tag.restaurantId);
+                continue;
+            }
         }
 
-        //(tags=XXX OR tags=XXX) AND (tags=XXX OR tags=XXX)
+        //(tags=XXX OR tags=XXX) AND (tags=XXX OR tags=XXX) AND (未有相應關鍵字 || tags=queryString )
         for (const rId of restaurantsMap.keys()) {
-            if (placeSearchSet.has(rId) && fooodSearchSet.has(rId)) {
+
+            if (placeSearchSet.has(rId) && fooodSearchSet.has(rId) &&
+                (queyStringSet.size == 0 || queyStringSet.has(rId))) {
                 matchedRestaurantsId.push(rId);
             }
         }
