@@ -39,7 +39,7 @@ function getResult() {
     let fooodSearchSet = new Set();
     let resultSet = new Set();
 
-    let matchedRestaurantsId = [];
+    let result = [];
 
     for (let tag of tags) {
 
@@ -66,25 +66,27 @@ function getResult() {
     }
     
     for (let rId of resultSet){
-        matchedRestaurantsId.push(rId);
+        result.push(rId);
     }
 
-    showResult(matchedRestaurantsId);
+    showResult(result);
 }
 
 function searchName() {
     var target = document.getElementById("searchByName").value;
     var foodStore;
     // console.log(target);
+
+    var result = [];
     for (let id of matchedRestaurantsId) {
         foodStore = food.get(id);
         if (foodStore.name == target) {
-            matchedRestaurantsId = [id];
-            // console.log(matchedRestaurantsId[0]);
+            result = [id];
+            // console.log(result[0]);
             break;
         }
     }
-    showResult(matchedRestaurantsId);
+    showResult(result);
 }
 
 function showResult(matchedRestaurantsId) { //呈現結果
