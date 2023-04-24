@@ -5,27 +5,56 @@ for (let key of food.keys()) { //儲存所有key值 => 用來初始化
 }
 
 showResult(matchedRestaurantsId); //初始化
-//要和品蓉說：好像有些資料圖片沒看到（？
+//要和品蓉說：好像有些資料圖片沒看到 & 部分字體未能統一（？
 
 function loadTag() {
 }
 
+function searchName() {
+    var target = document.getElementById("searchByName").value;
+    var foodStore;
+    // console.log(target);
+    for (let id of matchedRestaurantsId) {
+        foodStore = food.get(id);
+        if (foodStore.name == target) {
+            matchedRestaurantsId = [id];
+            // console.log(matchedRestaurantsId[0]);
+            break;
+        }
+    }
+    showResult(matchedRestaurantsId);
+}
+
 function showResult(matchedRestaurantsId) { //呈現結果
+    var newArea = document.createElement("div"); //準備好新東東
+    newArea.className = "row g-4 portfolio-container wow fadeInUp";
+    newArea.setAttribute("data-wow-delay", "0.5s");
+    newArea.id = "showArea";
+    
+    var area = document.getElementById("showArea");
+
     for (let num of matchedRestaurantsId) {
         if (food.has(num)) {
-            var area = document.getElementById("showArea");
-
             let foodData = document.createElement("div");  //第一層
             foodData.className = "col-lg-4 col-md-6 portfolio-item";
 
             let foodV2 = document.createElement("div"); //第二層
             foodV2.className = "portfolio-img rounded overflow-hidden";
 
-            let foodV3 = document.createElement("img"); //第三層
+            let foodV3 = document.createElement("img"); //第三層-1
             let foodWid = document.createAttribute("width");
             foodV3.className = "img-fluid";
-            foodV3.src = food.get(num).image;; //food.get(foodKey).image;
+            foodV3.src = food.get(num).image[0]; //food.get(foodKey).image;
             foodV3.style.width = "100%";
+
+            let foodName = document.createElement("div"); //第三層-2
+            foodName.className = "pt-3";
+            foodName.appendChild(document.createTextNode(food.get(num).name));
+
+            let foodName2 = document.createElement("p");
+            foodName2.className = "text-primary mb-0";
+            let foodName3 = document.createElement("hr");
+            foodName3.className = "text-primary w-25 my-2";
 
             let foodV4 = document.createElement("div"); //第四層
             foodV4.className = "portfolio-btn";
@@ -36,7 +65,7 @@ function showResult(matchedRestaurantsId) { //呈現結果
             let foodMenuAtt = document.createAttribute("data-lightbox");
             foodMenuAtt.value = "portfolio";
             foodMenu.setAttributeNode(foodMenuAtt);
-            
+
 
             let menuIcon = document.createElement("i"); //第六層-1: icon
             menuIcon.className = "fa fa-eye";
@@ -53,11 +82,15 @@ function showResult(matchedRestaurantsId) { //呈現結果
             foodMenu.appendChild(menuIcon);
             foodV4.appendChild(foodMenu);
             foodV4.appendChild(foodAdd);
+            foodName.appendChild(foodName2);
+            foodName.appendChild(foodName3);
             foodV2.appendChild(foodV3);
+            foodV2.appendChild(foodName);
             foodV2.appendChild(foodV4);
             foodData.appendChild(foodV2);
 
-            area.appendChild(foodData);
+            newArea.appendChild(foodData);
         }
     }
+    area.parentNode.replaceChild(newArea, area);
 }

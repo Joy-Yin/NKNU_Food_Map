@@ -273,7 +273,7 @@ const restaurants = [{
     {
         id: "00035",
         name: "SUBWAY",
-        image: ["./img/subway.png"],
+        image: ["./img/subway.jpeg"],
         website: "https://subway.com.tw/GoWeb2/include/index.html",
         openingTime: "依各分店不同",
         holiday: null
