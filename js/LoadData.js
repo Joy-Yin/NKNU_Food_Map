@@ -273,7 +273,7 @@ const restaurants = [{
     {
         id: "00035",
         name: "SUBWAY",
-        image: ["./img/subway.png"],
+        image: ["./img/subway.jpeg"],
         website: "https://subway.com.tw/GoWeb2/include/index.html",
         openingTime: "依各分店不同",
         holiday: null
@@ -1012,10 +1012,6 @@ const tags = [{
         tag: "宵夜"
     },
     {
-        restaurantId: "00027",
-        tag: "飲料"
-    },
-    {
         restaurantId: "00028",
         tag: "燕巢"
     },
@@ -1034,22 +1030,6 @@ const tags = [{
     {
         restaurantId: "00028",
         tag: "麻古"
-    },
-    {
-        restaurantId: "00028",
-        tag: "早餐"
-    },
-    {
-        restaurantId: "00028",
-        tag: "午餐"
-    },
-    {
-        restaurantId: "00028",
-        tag: "晚餐"
-    },
-    {
-        restaurantId: "00028",
-        tag: "宵夜"
     },
     {
         restaurantId: "00028",
@@ -1073,22 +1053,6 @@ const tags = [{
     },
     {
         restaurantId: "00029",
-        tag: "早餐"
-    },
-    {
-        restaurantId: "00029",
-        tag: "午餐"
-    },
-    {
-        restaurantId: "00029",
-        tag: "晚餐"
-    },
-    {
-        restaurantId: "00029",
-        tag: "宵夜"
-    },
-    {
-        restaurantId: "00029",
         tag: "飲料"
     },
     {
@@ -1102,22 +1066,6 @@ const tags = [{
     {
         restaurantId: "00030",
         tag: "楠梓"
-    },
-    {
-        restaurantId: "00030",
-        tag: "早餐"
-    },
-    {
-        restaurantId: "00030",
-        tag: "午餐"
-    },
-    {
-        restaurantId: "00030",
-        tag: "晚餐"
-    },
-    {
-        restaurantId: "00030",
-        tag: "宵夜"
     },
     {
         restaurantId: "00030",
@@ -1145,22 +1093,6 @@ const tags = [{
     },
     {
         restaurantId: "00031",
-        tag: "早餐"
-    },
-    {
-        restaurantId: "00031",
-        tag: "午餐"
-    },
-    {
-        restaurantId: "00031",
-        tag: "晚餐"
-    },
-    {
-        restaurantId: "00031",
-        tag: "宵夜"
-    },
-    {
-        restaurantId: "00031",
         tag: "飲料"
     },
     {
@@ -1178,22 +1110,6 @@ const tags = [{
     {
         restaurantId: "00032",
         tag: "里港"
-    },
-    {
-        restaurantId: "00032",
-        tag: "早餐"
-    },
-    {
-        restaurantId: "00032",
-        tag: "午餐"
-    },
-    {
-        restaurantId: "00032",
-        tag: "晚餐"
-    },
-    {
-        restaurantId: "00032",
-        tag: "宵夜"
     },
     {
         restaurantId: "00032",
@@ -1361,10 +1277,10 @@ makeMap();
 
 
 // //勾選【飲料】
-// if (checkboxesExample.placeTags == undefined) {
+// if (checkboxesExample.foodTags == undefined) {
 //     Object.assign(checkboxesExample, { foodTags: { "飲料": true } });
 // } else {
-//     Object.assign(checkboxesExample.placeTags, { "飲料": true });
+//     Object.assign(checkboxesExample.foodTags, { "飲料": true });
 // }
 // console.log(checkboxesExample);
 

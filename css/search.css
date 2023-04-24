@@ -1,0 +1,142 @@
+.search {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.search__input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #f4f2f2;
+    border: none;
+    color: #646464;
+    padding: 0.7rem 1rem;
+    border-radius: 30px;
+    width: 30em;
+    transition: all ease-in-out .5s;
+    margin-right: -2rem;
+}
+
+.search__input:hover,
+.search__input:focus {
+    box-shadow: 0 0 1em #00000013;
+}
+
+.search__input:focus {
+    outline: none;
+    background-color: #f0eeee;
+}
+
+.search__input::-webkit-input-placeholder {
+    font-weight: 100;
+    color: #ccc;
+}
+
+.search__input:focus+.search__button {
+    background-color: #f0eeee;
+}
+
+.search__button {
+    position: relative;
+    right: 1vw;
+    border: none;
+    background-color: #f4f2f2;
+    margin-top: .1em;
+    padding-bottom: 1%;
+}
+
+
+
+.search__button:hover {
+    cursor: pointer;
+}
+
+.search__icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: #b4b4b4;
+}
+
+.placeTag {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.foodTag {
+    font-size: 24px;
+    /* padding-left: 8%; */
+    display: flex;
+    justify-content: center;
+}
+
+.material-checkbox {
+    /* display: flex; */
+    align-items: center;
+    color: #777777;
+    cursor: pointer;
+}
+
+.material-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkmark {
+    position: relative;
+    margin-left: 20px;
+    left: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    border: 2px solid #030019;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.material-checkbox input[type="checkbox"]:checked~.checkmark {
+    background-color: #07001a;
+    border-color: #000000;
+}
+
+.material-checkbox input[type="checkbox"]:checked~.checkmark:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 4px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.material-checkbox input[type="checkbox"]:disabled~.checkmark {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.material-checkbox input[type="checkbox"]:disabled~.checkmark:hover {
+    border-color: #4d4d4d;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btnContainer{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap:3vw;
+}
+
+
