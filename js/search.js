@@ -122,7 +122,6 @@ function showResult(matchedRestaurantsId) { //呈現結果
             foodV2.className = "portfolio-img rounded overflow-hidden";
 
             let foodV3 = document.createElement("img"); //第三層-1
-            let foodWid = document.createAttribute("width");
             foodV3.className = "img-fluid";
             foodV3.src = food.get(num).image[0]; //food.get(foodKey).image;
             foodV3.style.width = "100%";
@@ -165,9 +164,9 @@ function showResult(matchedRestaurantsId) { //呈現結果
             foodName.appendChild(foodName2);
             foodName.appendChild(foodName3);
             foodV2.appendChild(foodV3);
-            foodV2.appendChild(foodName);
             foodV2.appendChild(foodV4);
             foodData.appendChild(foodV2);
+            foodData.appendChild(foodName);
 
             newArea.appendChild(foodData);
         }
