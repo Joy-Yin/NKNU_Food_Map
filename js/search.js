@@ -5,7 +5,7 @@ for (let key of food.keys()) { //儲存所有key值 => 用來初始化
 }
 
 showResult(matchedRestaurantsId); //初始化
-//要和品蓉說：好像有些資料圖片沒看到 & 部分字體未能統一（？
+//要和品蓉說：部分字體未能統一（？
 
 function loadTag() {
     let placeTags = ["燕巢", "大社", "楠梓", "里港"];
@@ -59,13 +59,13 @@ function getResult() {
         for (const rId of food.keys()) {
             if ((checkBoxPla.length == 0 || placeSearchSet.has(rId)) &&
                 (checkBoxFod.length == 0 || fooodSearchSet.has(rId))) {
-                    resultSet.add(rId);
+                resultSet.add(rId);
             }
 
         }
     }
-    
-    for (let rId of resultSet){
+
+    for (let rId of resultSet) {
         result.push(rId);
     }
 
@@ -87,6 +87,21 @@ function searchName() {
         }
     }
     showResult(result);
+}
+
+function reset() {
+    let matchedRestaurantsId = [];
+    let checkBox = ["燕巢", "大社", "楠梓", "里港", "早餐", "午餐", "晩餐", "宵夜", "麵", "飯", "吐司漢堡", "炸物", "飲料", "其他"];
+    for (let key of food.keys()) {
+        matchedRestaurantsId.push(key);
+    }
+
+    for (let box of checkBox){
+        let tag = document.getElementById(box);
+        tag.checked = false;
+    }
+
+    showResult(matchedRestaurantsId);
 }
 
 function showResult(matchedRestaurantsId) { //呈現結果
@@ -125,7 +140,7 @@ function showResult(matchedRestaurantsId) { //呈現結果
 
             let foodMenu = document.createElement("a"); //第五層-1: 菜單
             foodMenu.className = "btn btn-lg-square btn-outline-light rounded-circle mx-1";
-            foodMenu.href = food.get(num).image;//food.get(foodKey).image;
+            foodMenu.href = food.get(num).image[0];//food.get(foodKey).image;
             let foodMenuAtt = document.createAttribute("data-lightbox");
             foodMenuAtt.value = "portfolio";
             foodMenu.setAttributeNode(foodMenuAtt);
@@ -158,3 +173,11 @@ function showResult(matchedRestaurantsId) { //呈現結果
     }
     area.parentNode.replaceChild(newArea, area);
 }
+
+
+document.getElementById("searchByName")
+    .addEventListener("keyup", function (e) {
+        if (e.keyCode === 13) {
+            searchName();
+        }
+    });

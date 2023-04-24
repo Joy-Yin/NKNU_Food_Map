@@ -1,10 +1,8 @@
 .search {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     text-align: center;
-    padding-left: 18%;
-    width: 105%;
+    justify-content: center;
 }
 
 .search__input {
@@ -15,7 +13,7 @@
     color: #646464;
     padding: 0.7rem 1rem;
     border-radius: 30px;
-    width: 25em;
+    width: 30em;
     transition: all ease-in-out .5s;
     margin-right: -2rem;
 }
@@ -41,12 +39,14 @@
 
 .search__button {
     position: relative;
-    right: 32%;
+    right: 1vw;
     border: none;
     background-color: #f4f2f2;
     margin-top: .1em;
     padding-bottom: 1%;
 }
+
+
 
 .search__button:hover {
     cursor: pointer;
@@ -66,9 +66,9 @@
 
 .foodTag {
     font-size: 24px;
-    padding-left: 8%;
-    /* display: flex;
-    justify-content: center; */
+    /* padding-left: 8%; */
+    display: flex;
+    justify-content: center;
 }
 
 .material-checkbox {
@@ -123,3 +123,20 @@
 .material-checkbox input[type="checkbox"]:disabled~.checkmark:hover {
     border-color: #4d4d4d;
 }
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btnContainer{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap:3vw;
+}
+
+

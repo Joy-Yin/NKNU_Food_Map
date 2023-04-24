@@ -110,14 +110,14 @@
     <!-- Projects Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 650px;">
+            <div class="text-center mx-auto mb-5 wow fadeInUp titleContainer" data-wow-delay="0.1s" style="max-width: 650px;">
                 <div class="search_title" style="display: inline;">
                     <h6 class="text-primary">不知道該吃什麼？</h6>
                     <h1 class="mb-4" style="font-weight: 500;">(☞ﾟヮﾟ)☞那就篩選一下☜(ﾟヮﾟ☜)</h1>
                 </div>
                 <div class="search">
                     <input type="text" class="search__input" placeholder="搜尋店家" id="searchByName">
-                    <button class="search__button"  onclick="searchName()">
+                    <button class="search__button" onclick="searchName()">
                         <svg class="search__icon" aria-hidden="true" viewBox="0 0 25 25">
                             <g>
                                 <path
@@ -147,6 +147,7 @@
                 </label>
             </div>
             <div class="foodTag">
+               <div class="foodTagCenter">
                 <label class="material-checkbox">
                     <input type="checkbox" id="早餐">
                     <span class="checkmark"></span>早餐
@@ -188,7 +189,16 @@
                     <span class="checkmark"></span>其他
                 </label>
             </div>
-            <a href="#keepUpdating" class="btn btn-primary py-3 px-4 me-5" id="goSearch" style="display: flex; justify-content: center; align-items: center; left: 41%; width: 16%; position: relative; margin-top: 20px; margin-bottom: 20px;" onclick="getResult()">找吃的╰(*°▽°*)╯</a>
+            </div>
+            <div class="btnContainer">
+                <a href="#keepUpdating" class="btn btn-primary py-3 px-4" id="goSearch"
+                    style="display: flex; justify-content: center; align-items: center; width: 16%; position: relative; margin-top: 20px; margin-bottom: 20px;"
+                    onclick="getResult()">找吃的╰(*°▽°*)╯</a>
+                <a href="#keepUpdating" class="btn btn-primary py-3 px-4" id="goSearch"
+                    style="display: flex; justify-content: center; align-items: center; width: 16%; position: relative; margin-top: 20px; margin-bottom: 20px;"
+                    onclick="reset()">清空條件</a>
+
+            </div>
             <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.5s" id="showArea">
             </div>
             <!-- <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
