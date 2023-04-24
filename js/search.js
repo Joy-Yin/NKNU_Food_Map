@@ -102,6 +102,7 @@ function reset() {
     }
 
     showResult(matchedRestaurantsId);
+    document.getElementById("searchByName").value = "";
 }
 
 function showResult(matchedRestaurantsId) { //呈現結果
