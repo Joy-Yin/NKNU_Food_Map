@@ -250,7 +250,7 @@ const restaurants = [{
         id: "00032",
         name: "水巷茶弄",
         image: ["./img/cha-nung.png"],
-        website: "https://www.recallchildhood.com.tw/userfiles/images/20210126034143481.png",
+        website: "https://www.chanung.com.tw/products",
         openingTime: "依各分店不同",
         holiday: null
     },
@@ -1379,10 +1379,10 @@ console.log(checkboxesExample);
 
 
 //Step2 進行搜尋並顯示結果
-// const resultIds = getSearchResultIds(checkboxesExample);
-// for (let resultId of resultIds) {
-//     console.log(restaurantsMap.get(resultId));
-// }
+const resultIds = getSearchResultIds(checkboxesExample);
+for (let resultId of resultIds) {
+    console.log(restaurantsMap.get(resultId));
+}
 
 
 
