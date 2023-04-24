@@ -8,6 +8,68 @@ showResult(matchedRestaurantsId); //初始化
 //要和品蓉說：好像有些資料圖片沒看到 & 部分字體未能統一（？
 
 function loadTag() {
+    let placeTags = ["燕巢", "大社", "楠梓", "里港"];
+    let foodTags = ["早餐", "午餐", "晩餐", "宵夜", "麵", "飯", "吐司漢堡", "炸物", "飲料", "其他"];
+
+    let checkBoxPla = [];
+    let checkBoxFod = [];
+    for (let place = 0; place < 4; place++) {
+        let tag = document.getElementById(placeTags[place]);
+        if (tag.checked) {
+            // console.log(placeTags[place]);
+            checkBoxPla.push(placeTags[place]);
+        }
+    }
+    for (let food = 0; food < 10; food++) {
+        let tag = document.getElementById(foodTags[food]);
+        if (tag.checked) {
+            // console.log(foodTags[food]);
+            checkBoxFod.push(foodTags[food]);
+        }
+    }
+    let checkBox = [checkBoxPla, checkBoxFod];
+    return checkBox;
+}
+
+function getResult() {
+    let checkBoxPla = loadTag()[0];
+    let checkBoxFod = loadTag()[1];
+
+    let placeSearchSet = new Set();
+    let fooodSearchSet = new Set();
+    let resultSet = new Set();
+
+    let matchedRestaurantsId = [];
+
+    for (let tag of tags) {
+
+        const isMatched = (checkedTag) => tag.tag == checkedTag;
+        //(tags=XXX OR tags=XXX)
+        if (checkBoxPla.findIndex(isMatched) != -1) {
+            placeSearchSet.add(tag.restaurantId);
+            continue;
+        }
+
+        //(tags=XXX OR tags=XXX)
+        if (checkBoxFod.findIndex(isMatched) != -1) {
+            fooodSearchSet.add(tag.restaurantId);
+            continue;
+        };
+
+        for (const rId of food.keys()) {
+            if ((checkBoxPla.length == 0 || placeSearchSet.has(rId)) &&
+                (checkBoxFod.length == 0 || fooodSearchSet.has(rId))) {
+                    resultSet.add(rId);
+            }
+
+        }
+    }
+    
+    for (let rId of resultSet){
+        matchedRestaurantsId.push(rId);
+    }
+
+    showResult(matchedRestaurantsId);
 }
 
 function searchName() {
@@ -30,7 +92,7 @@ function showResult(matchedRestaurantsId) { //呈現結果
     newArea.className = "row g-4 portfolio-container wow fadeInUp";
     newArea.setAttribute("data-wow-delay", "0.5s");
     newArea.id = "showArea";
-    
+
     var area = document.getElementById("showArea");
 
     for (let num of matchedRestaurantsId) {

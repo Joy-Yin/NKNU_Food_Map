@@ -3,8 +3,8 @@
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    padding-left: 15%;
-    width: 80%;
+    padding-left: 18%;
+    width: 105%;
 }
 
 .search__input {
@@ -41,7 +41,7 @@
 
 .search__button {
     position: relative;
-    right: 4%;
+    right: 32%;
     border: none;
     background-color: #f4f2f2;
     margin-top: .1em;
