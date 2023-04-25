@@ -65,11 +65,21 @@ function loadData(){
     beverageArea.appendChild(document.createTextNode(recommendBeverage.name));
     //載入營業時間
     let foodOpeningTime = document.createElement("p");
-    foodOpeningTime.appendChild(document.createTextNode("營業時間："+recommendFood.openingTime));
+    if(recommendFood.openingTime != null){
+        foodOpeningTime.appendChild(document.createTextNode("營業時間："+recommendFood.openingTime));
+    }
+    else {
+        foodOpeningTime.appendChild(document.createTextNode("營業時間：無資料"));
+    }
     foodArea.appendChild(foodOpeningTime);
 
     let beverageOpeningTime = document.createElement("p");
-    beverageOpeningTime.appendChild(document.createTextNode("營業時間："+recommendBeverage.openingTime));
+    if(recommendBeverage.openingTime != null){
+        beverageOpeningTime.appendChild(document.createTextNode("營業時間："+recommendBeverage.openingTime));
+    }
+    else {
+        beverageOpeningTime.appendChild(document.createTextNode("營業時間：無資料"));
+    }
     beverageArea.appendChild(beverageOpeningTime);
 
     let foodWebsite = document.createElement("a");
