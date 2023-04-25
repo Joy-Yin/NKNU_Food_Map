@@ -21,14 +21,14 @@ function loadTag() {
         }
     }
     for (let food = 0; food < 10; food++) {
-        let tag = document.getElementById(foodTags[food]);
-        if (tag.checked) {
+        let tagLabel = document.getElementById(foodTags[food]);
+        if (tagLabel.checked) {
             // console.log(foodTags[food]);
             checkBoxFod.push(foodTags[food]);
         }
     }
-    let checkBox = [checkBoxPla, checkBoxFod];
-    return checkBox;
+    let checkBoxList = [checkBoxPla, checkBoxFod];
+    return checkBoxList;
 }
 
 function getResult() {
@@ -96,7 +96,7 @@ function reset() {
         matchedRestaurantsId.push(key);
     }
 
-    for (let box of checkBox){
+    for (let box of checkBox) {
         let tag = document.getElementById(box);
         tag.checked = false;
     }
@@ -115,7 +115,7 @@ function showResult(matchedRestaurantsId) { //呈現結果
 
     for (let num of matchedRestaurantsId) {
         if (food.has(num)) {
-            let foodData = document.createElement("div");  //第一層
+            let foodData = document.createElement("div"); //第一層
             foodData.className = "col-lg-4 col-md-6 portfolio-item";
 
             let foodV2 = document.createElement("div"); //第二層
@@ -140,7 +140,7 @@ function showResult(matchedRestaurantsId) { //呈現結果
 
             let foodMenu = document.createElement("a"); //第五層-1: 菜單
             foodMenu.className = "btn btn-lg-square btn-outline-light rounded-circle mx-1";
-            foodMenu.href = food.get(num).image[0];//food.get(foodKey).image;
+            foodMenu.href = food.get(num).image[0]; //food.get(foodKey).image;
             let foodMenuAtt = document.createAttribute("data-lightbox");
             foodMenuAtt.value = "portfolio";
             foodMenu.setAttributeNode(foodMenuAtt);
@@ -151,7 +151,7 @@ function showResult(matchedRestaurantsId) { //呈現結果
 
             let foodAdd = document.createElement("a"); //第五層-2: 菜單
             foodAdd.className = "btn btn-lg-square btn-outline-light rounded-circle mx-1";
-            foodAdd.href = food.get(num).website;;//food.get(foodKey).website;
+            foodAdd.href = food.get(num).website;; //food.get(foodKey).website;
             foodAdd.target = "_blank";
 
             let addIcon = document.createElement("i"); //第六層-2: icon
@@ -176,7 +176,7 @@ function showResult(matchedRestaurantsId) { //呈現結果
 
 
 document.getElementById("searchByName")
-    .addEventListener("keyup", function (e) {
+    .addEventListener("keyup", function(e) {
         if (e.keyCode === 13) {
             searchName();
         }
