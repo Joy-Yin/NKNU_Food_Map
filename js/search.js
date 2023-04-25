@@ -9,7 +9,7 @@ showResult(matchedRestaurantsId); //初始化
 
 function loadTag() {
     let placeTags = ["燕巢", "大社", "楠梓", "里港"];
-    let foodTags = ["早餐", "午餐", "晩餐", "宵夜", "麵", "飯", "吐司漢堡", "炸物", "飲料", "其他"];
+    let foodTags = ["早餐", "午餐", "晚餐", "宵夜", "麵", "飯", "吐司漢堡", "炸物", "飲料", "其他"];
 
     let checkBoxPla = [];
     let checkBoxFod = [];
