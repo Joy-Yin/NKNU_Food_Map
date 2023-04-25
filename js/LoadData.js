@@ -998,19 +998,11 @@ const tags = [{
     },
     {
         restaurantId: "00027",
-        tag: "早餐"
+        tag: "飲料"
     },
     {
         restaurantId: "00027",
-        tag: "午餐"
-    },
-    {
-        restaurantId: "00027",
-        tag: "晚餐"
-    },
-    {
-        restaurantId: "00027",
-        tag: "宵夜"
+        tag: "麻古"
     },
     {
         restaurantId: "00028",
@@ -1027,10 +1019,6 @@ const tags = [{
     {
         restaurantId: "00028",
         tag: "里港"
-    },
-    {
-        restaurantId: "00028",
-        tag: "麻古"
     },
     {
         restaurantId: "00028",
