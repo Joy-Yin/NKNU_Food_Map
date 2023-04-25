@@ -14,8 +14,8 @@ function loadTag() {
     let checkBoxPla = [];
     let checkBoxFod = [];
     for (let place = 0; place < 4; place++) {
-        let tag = document.getElementById(placeTags[place]);
-        if (tag.checked) {
+        let tagLabel = document.getElementById(placeTags[place]);
+        if (tagLabel.checked) {
             // console.log(placeTags[place]);
             checkBoxPla.push(placeTags[place]);
         }
