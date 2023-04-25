@@ -91,7 +91,7 @@ function searchName() {
 
 function reset() {
     let matchedRestaurantsId = [];
-    let checkBox = ["燕巢", "大社", "楠梓", "里港", "早餐", "午餐", "晩餐", "宵夜", "麵", "飯", "吐司漢堡", "炸物", "飲料", "其他"];
+    let checkBox = ["燕巢", "大社", "楠梓", "里港", "早餐", "午餐", "晚餐", "宵夜", "麵", "飯", "吐司漢堡", "炸物", "飲料", "其他"];
     for (let key of food.keys()) {
         matchedRestaurantsId.push(key);
     }
