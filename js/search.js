@@ -1,7 +1,7 @@
 const restaurantIds = [...restaurantsMap.keys()]; //儲存所有key值 => 用來初始化
 const placeTags = ["燕巢", "大社", "楠梓", "里港"];
 const foodTags = ["早餐", "午餐", "晚餐", "宵夜", "麵", "飯", "吐司漢堡", "炸物", "飲料", "其他"];
-showResult(restaurantIds); //初始化
+reset(); //初始化
 
 function loadTag() {
 
