@@ -122,12 +122,18 @@ function showResult(matchedIds) { //呈現結果
         let foodV4 = document.createElement("div"); //第四層
         foodV4.className = "portfolio-btn";
 
-        let foodMenu = document.createElement("a"); //第五層-1: 菜單
-        foodMenu.className = "btn btn-lg-square btn-outline-light rounded-circle mx-1";
-        foodMenu.href = restaurantsMap.get(num).image[0]; //restaurantsMap.get(foodKey).image;
-        let foodMenuAtt = document.createAttribute("data-lightbox");
-        foodMenuAtt.value = "portfolio";
-        foodMenu.setAttributeNode(foodMenuAtt);
+
+        let foodMenus = [];
+        for (let menuImg of restaurantsMap.get(num).image) {
+            let foodMenu = document.createElement("a"); //第五層-1: 菜單
+            foodMenu.href = menuImg; //restaurantsMap.get(foodKey).image;
+            let foodMenuAtt = document.createAttribute("data-lightbox");
+            foodMenuAtt.value = restaurantsMap.get(num).name;
+            foodMenu.setAttributeNode(foodMenuAtt);
+            foodMenus.push(foodMenu);
+        }
+        foodMenus[0].className = "btn btn-lg-square btn-outline-light rounded-circle mx-1";
+
 
 
         let menuIcon = document.createElement("i"); //第六層-1: icon
@@ -142,8 +148,10 @@ function showResult(matchedIds) { //呈現結果
         addIcon.className = "fa fa-link";
 
         foodAdd.appendChild(addIcon);
-        foodMenu.appendChild(menuIcon);
-        foodV4.appendChild(foodMenu);
+        foodMenus[0].appendChild(menuIcon);
+        for (let menuComponent of foodMenus) {
+            foodV4.appendChild(menuComponent);
+        }
         foodV4.appendChild(foodAdd);
         foodName.appendChild(foodName2);
         foodName.appendChild(foodName3);
