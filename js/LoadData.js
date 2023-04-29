@@ -698,22 +698,6 @@ const tags = [{
     },
     {
         restaurantId: "00016",
-        tag: "早餐"
-    },
-    {
-        restaurantId: "00016",
-        tag: "午餐"
-    },
-    {
-        restaurantId: "00016",
-        tag: "晚餐"
-    },
-    {
-        restaurantId: "00016",
-        tag: "飲料"
-    },
-    {
-        restaurantId: "00016",
         tag: "心喜"
     },
     {
