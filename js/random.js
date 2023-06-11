@@ -1,57 +1,43 @@
-let food = new Map(restaurantsMap);
+
 const dateObject = new Date();
 const year = dateObject.getFullYear();
 const month = dateObject.getMonth() + 1;
 const date = dateObject.getDate();
 let recommendFood;
 let recommendBeverage;
-getRandomRecommendation();
-loadData();
-function getRandomBeverage(year, month, date){
-    const beverage = {
-        placeTags: {
-            "燕巢": false,
-            "大社": false,
-            "楠梓": false,
-            "里港": false,
-        },
-        foodTags: {
-            "飲料": true
-        }
-    };
+load();
 
-    const beverageIds = getSearchResultIds(beverage);
+async function getRandomBeverage(year, month, date){
+    const url = "https://nknu-food-map-server.vercel.app/api/restaurants/search?food[]=飲料";
+    const beverageIds = await query(url);
     let beverageNum = ( year + month + date ) % beverageIds.length;
-    // console.log(restaurantsMap.get(beverageIds[beverageNum]));//this
-
-    for(let element of beverageIds){//把飲料與食物分離
-        for(let i of restaurantsMap.keys()){
-            if(element == i){
-                food.delete(i);
-                break;
-            }
-        }
-    }
-    return restaurantsMap.get(beverageIds[beverageNum]);
+    return beverageIds[beverageNum];
 }
 
-function getRandomFood(year, month, date){
-    let foodNum = ( year + month + date ) % food.size;
-    let foodKey = food.keys();;
-    for(let i = 1; i <= foodNum; i++){
-        if(i == foodNum){
-            // console.log(food.get(foodKey.next().value));//this
-            return food.get(foodKey.next().value);
-        }
-        else{
-            foodKey.next();
-        }
-    }
+async function query(url) {
+    let result ;
+    await fetch(url, {
+            method: 'GET',
+        })
+        .then(async(resJson) => {
+            const r = await resJson.json();
+            result =  r;
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    return result;
 }
 
-function getRandomRecommendation(){
-    recommendBeverage = getRandomBeverage(year, month, date);
-    recommendFood = getRandomFood(year, month, date);
+async function getRandomFood(year, month, date){
+    const foodIds = await query("https://nknu-food-map-server.vercel.app/api/restaurants/search/exclude?food[]=飲料");
+    let foodNum = ( year + month + date ) % foodIds.length;
+    return foodIds[foodNum];
+}
+
+async function getRandomRecommendation(){
+    recommendBeverage = await getRandomBeverage(year, month, date);
+    recommendFood = await getRandomFood(year, month, date);
 }
 
 function loadData(){
@@ -82,6 +68,25 @@ function loadData(){
     }
     beverageArea.appendChild(beverageOpeningTime);
 
+    //載入公休日
+    let foodHoliday = document.createElement("p");
+    if(recommendFood.holiday != null){
+        foodHoliday.appendChild(document.createTextNode("公休日："+recommendFood.holiday));
+    }
+    else {
+        foodHoliday.appendChild(document.createTextNode("公休日：無"));
+    }
+    foodArea.appendChild(foodHoliday);
+
+    let beverageHoliday = document.createElement("p");
+    if(recommendBeverage.holiday != null){
+        beverageHoliday.appendChild(document.createTextNode("公休日："+recommendBeverage.holiday));
+    }
+    else {
+        beverageHoliday.appendChild(document.createTextNode("公休日：無"));
+    }
+    beverageArea.appendChild(beverageHoliday);
+
     let foodWebsite = document.createElement("a");
     let foodLinkAttr = document.createAttribute("class");
     foodLinkAttr.value = "btn btn-primary py-3 px-5";
@@ -103,4 +108,9 @@ function loadData(){
     beverageWebsite.target = "_blank";
     beverageWebsite.appendChild(document.createTextNode("GO"));
     beverageArea.appendChild(beverageWebsite);
+}
+
+async function load(){
+    await getRandomRecommendation();
+    loadData();
 }
