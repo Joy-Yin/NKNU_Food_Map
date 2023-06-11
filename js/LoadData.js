@@ -1,3 +1,4 @@
+//重新deploy
 //依資料庫table作為變數
 const restaurants = [{
         id: "00001",
@@ -412,7 +413,7 @@ const tags = [{
         tag: "飯"
     },
     {
-        restaurantId: "00003",
+        restaurantId: "00005",
         tag: "壹顆壽司"
     },
     {
@@ -694,22 +695,6 @@ const tags = [{
     {
         restaurantId: "00016",
         tag: "楠梓"
-    },
-    {
-        restaurantId: "00016",
-        tag: "早餐"
-    },
-    {
-        restaurantId: "00016",
-        tag: "午餐"
-    },
-    {
-        restaurantId: "00016",
-        tag: "晚餐"
-    },
-    {
-        restaurantId: "00016",
-        tag: "飲料"
     },
     {
         restaurantId: "00016",
@@ -997,19 +982,11 @@ const tags = [{
     },
     {
         restaurantId: "00027",
-        tag: "早餐"
+        tag: "飲料"
     },
     {
         restaurantId: "00027",
-        tag: "午餐"
-    },
-    {
-        restaurantId: "00027",
-        tag: "晚餐"
-    },
-    {
-        restaurantId: "00027",
-        tag: "宵夜"
+        tag: "麻古"
     },
     {
         restaurantId: "00028",
@@ -1026,10 +1003,6 @@ const tags = [{
     {
         restaurantId: "00028",
         tag: "里港"
-    },
-    {
-        restaurantId: "00028",
-        tag: "麻古"
     },
     {
         restaurantId: "00028",
@@ -1241,7 +1214,7 @@ makeMap();
 //地區未勾選任一項 => 視為全選
 //可以只寫要篩選的項目 
 //食物類別區只勾選【飲料】
-// const checkboxesExample = {
+// const queryObjExample = {
 //     placeTags: {
 //         "燕巢": false,
 //         "大社": false,
@@ -1263,63 +1236,10 @@ makeMap();
 //     queryString: "" //若輸入關鍵字 則可直接查找店家或是餐點類型 例如:"丹丹"、"吐司漢堡"，空字串則表示都未篩此項
 // };
 
-// const checkboxesExample = {};
-// console.log(checkboxesExample);
-
-
-// //勾選【大社】
-// if (checkboxesExample.placeTags == undefined) {
-//     Object.assign(checkboxesExample, { placeTags: { "大社": true } });
-// } else {
-//     Object.assign(checkboxesExample.placeTags, { "大社": true });
-// }
-// console.log(checkboxesExample);
-
-
-// //勾選【飲料】
-// if (checkboxesExample.foodTags == undefined) {
-//     Object.assign(checkboxesExample, { foodTags: { "飲料": true } });
-// } else {
-//     Object.assign(checkboxesExample.foodTags, { "飲料": true });
-// }
-// console.log(checkboxesExample);
-
-// //取消勾選【大社】
-// if (checkboxesExample.placeTags["大社"] != undefined)
-//     delete checkboxesExample.placeTags["大社"]; //也可以把它弄成false : checkboxesExample.placeTags["大社"] = false
-// console.log(checkboxesExample);
-
-// //輸入搜尋文字 "水巷茶弄" 並 按下Enter
-// checkboxesExample.queryString = "水巷茶弄";
-// console.log(checkboxesExample);
-
-
-// //Step2 進行搜尋並顯示結果
-// const resultIds = getSearchResultIds(checkboxesExample);
-// for (let resultId of resultIds) {
-//     console.log(restaurantsMap.get(resultId));
-// }
 
 
 
-/**
- * 回傳結果範例:
- * [{
-        id: "00001",
-        name: "丹丹",
-        image: ["./img/丹丹2.jpg"],
-        website: "./img/丹丹2.jpg",
-        openingTime: null,
-        holiday: null
-    }, {
-        id: "00002",
-        name: "My吐司",
-        image: ["./img/大社1.jpg"],
-        website: "https://goo.gl/maps/FtGGfteCaApSfuyEA",
-        openingTime: "每日18:00～01:30",
-        holiday: null
-    },
- */
+
 function getSearchResultIds(queryObj) {
 
     //Step2-1 獲取勾選項目 => 模擬建立資料庫query字串  (tags=XXX OR tags=XXX) AND (tags=XXX OR tags=XXX)
@@ -1332,60 +1252,54 @@ function getSearchResultIds(queryObj) {
         }
         return arr;
     }
-    const checkedplaceTags = getCheckboxes("placeTags");
-    const checkedfoodTags = getCheckboxes("foodTags");
-
 
     //step2-2  => 模擬資料庫query 
     // SELECT DISTINCT restaurantId 
     // FROM tags
     // WHERE (tags=XXX OR tags=XXX) AND (tags=XXX OR tags=XXX) AND (tags=="query string")... 
-    function getMatchedRestaurants() {
 
-        let matchedRestaurantsId = [];
-
-
-        let placeSearchSet = new Set();
-        let fooodSearchSet = new Set();
-        let queyStringSet = new Set();
+    const checkedplaceTags = getCheckboxes("placeTags");
+    const checkedfoodTags = getCheckboxes("foodTags");
 
 
-        for (let tag of tags) {
+    let matchedRestaurantsId = [];
+    let placeSearchSet = new Set();
+    let fooodSearchSet = new Set();
+    let queyStringSet = new Set();
 
-            const isMatched = (checkedTag) => tag.tag == checkedTag;
-            //(tags=XXX OR tags=XXX)
-            if (checkedplaceTags.findIndex(isMatched) != -1) {
-                placeSearchSet.add(tag.restaurantId);
-                continue;
-            }
+    for (let tag of tags) {
 
-            //(tags=XXX OR tags=XXX)
-            if (checkedfoodTags.findIndex(isMatched) != -1) {
-                fooodSearchSet.add(tag.restaurantId);
-                continue;
-            };
-
-            //(tags=queryString)
-            if (isMatched(queryObj.queryString)) {
-                queyStringSet.add(tag.restaurantId);
-                continue;
-            }
+        const isMatched = (checkedTag) => tag.tag == checkedTag;
+        //(tags=XXX OR tags=XXX)
+        if (checkedplaceTags.findIndex(isMatched) != -1) {
+            placeSearchSet.add(tag.restaurantId);
+            continue;
         }
 
+        //(tags=XXX OR tags=XXX)
+        if (checkedfoodTags.findIndex(isMatched) != -1) {
+            fooodSearchSet.add(tag.restaurantId);
+            continue;
+        };
 
-        //((未篩此類別 || tags=XXX OR tags=XXX)) AND (未篩此類別 || (tags=XXX OR tags=XXX)) AND (未有相應關鍵字 || tags=queryString )
-        for (const rId of restaurantsMap.keys()) {
-            if ((checkedplaceTags.length == 0 || placeSearchSet.has(rId)) &&
-                (checkedfoodTags.length == 0 || fooodSearchSet.has(rId)) &&
-                (queryObj.queryString == "" || queryObj.queryString == undefined || queyStringSet.has(rId))) {
-                matchedRestaurantsId.push(rId);
-            }
-
+        //(tags=queryString)
+        if (isMatched(queryObj.queryString)) {
+            queyStringSet.add(tag.restaurantId);
+            continue;
         }
-        return matchedRestaurantsId;
     }
 
-    return getMatchedRestaurants();
+
+    //((未篩此類別 || tags=XXX OR tags=XXX)) AND (未篩此類別 || (tags=XXX OR tags=XXX)) AND (未有相應關鍵字 || tags=queryString )
+    for (const rId of restaurantsMap.keys()) {
+        if ((checkedplaceTags.length == 0 || placeSearchSet.has(rId)) &&
+            (checkedfoodTags.length == 0 || fooodSearchSet.has(rId)) &&
+            (queryObj.queryString == "" || queryObj.queryString == undefined || queyStringSet.has(rId))) {
+            matchedRestaurantsId.push(rId);
+        }
+    }
+
+    return matchedRestaurantsId;
 }
 
 function getCountSearchResultIds(queryObj) {
