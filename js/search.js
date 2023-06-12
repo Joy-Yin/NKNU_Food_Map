@@ -1,4 +1,4 @@
-const restaurantIds = [...restaurantsMap.keys()]; //儲存所有key值 => 用來初始化
+// const restaurantIds = [...restaurantsMap.keys()]; //儲存所有key值 => 用來初始化
 const placeTags = ["燕巢", "大社", "楠梓", "里港"];
 const foodTags = ["早餐", "午餐", "晚餐", "宵夜", "麵", "飯", "吐司漢堡", "炸物", "飲料", "其他"];
 reset(); //初始化
@@ -26,39 +26,73 @@ function loadTag() {
     return checkBoxList;
 }
 
-function getResult() {
+async function query(url) {
+    let result ;
+    await fetch(url, {
+            method: 'GET',
+        })
+        .then(async(resJson) => {
+            const r = await resJson.json();
+            result =  r;
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    return result;
+}
+
+async function getResult() {
     let checkBoxes = loadTag();
     let checkBoxPla = checkBoxes[0];
     let checkBoxFod = checkBoxes[1];
 
-    let queryObj = {};
-
-    if (checkBoxPla.length > 0) {
-        Object.assign(queryObj, { placeTags: {} })
-        for (let box of checkBoxPla) {
-            Object.assign(queryObj.placeTags, {
-                [box]: true
-            })
-        }
+    let searchStr = "?";
+    for (let i = 0; i < checkBoxPla.length; i++) {
+        searchStr += "place[]=";
+        searchStr += checkBoxPla[i];
+        searchStr += "&";
     }
 
-    if (checkBoxFod.length > 0) {
-        Object.assign(queryObj, { placeTags: {} })
-        for (let box of checkBoxFod) {
-            Object.assign(queryObj.placeTags, {
-                [box]: true
-            })
-        }
+    for (let j = 0; j < checkBoxFod.length; j++) {
+        searchStr += "food[]=";
+        searchStr += checkBoxFod[j];
+        searchStr += "&";
     }
 
-    let result = getSearchResultIds(queryObj);
-    showResult(result);
+    const url = "https://nknu-food-map-server.vercel.app/api/restaurants/search" + searchStr;
+    const resultData = await query(url);
+
+    // let queryObj = {};
+
+    // if (checkBoxPla.length > 0) {
+    //     Object.assign(queryObj, { placeTags: {} })
+    //     for (let box of checkBoxPla) {
+    //         Object.assign(queryObj.placeTags, {
+    //             [box]: true
+    //         })
+    //     }
+    // }
+
+    // if (checkBoxFod.length > 0) {
+    //     Object.assign(queryObj, { placeTags: {} })
+    //     for (let box of checkBoxFod) {
+    //         Object.assign(queryObj.placeTags, {
+    //             [box]: true
+    //         })
+    //     }
+    // }
+
+    // let result = getSearchResultIds(queryObj);
+    showResult(resultData);
 }
 
-function searchName() {
+async function searchName() {
     let target = document.getElementById("searchByName").value;
 
-    let result = getSearchResultIds({ queryString: target });
+    let searchStr = "?query=" + target;
+    const url = "https://nknu-food-map-server.vercel.app/api/restaurants/search" + searchStr;
+    const resultData = await query(url);
+    // let result = getSearchResultIds({ queryString: target });
     // for (let id of matchedRestaurantsId) {
     //     foodStore = food.get(id);
     //     if (foodStore.name == target) {
@@ -67,10 +101,10 @@ function searchName() {
     //         break;
     //     }
     // }
-    showResult(result);
+    showResult(resultData);
 }
 
-function reset() {
+async function reset() {
 
 
     for (let box of placeTags) {
@@ -86,10 +120,13 @@ function reset() {
 
     document.getElementById("searchByName").value = "";
 
-    showResult(restaurantIds);
+    const url = "https://nknu-food-map-server.vercel.app/api/restaurants/search";
+    const resultData = await query(url);
+
+    showResult(resultData);
 }
 
-function showResult(matchedIds) { //呈現結果
+function showResult(resultData) { //呈現結果
     var newArea = document.createElement("div"); //準備好新東東
     newArea.className = "row g-4 portfolio-container wow fadeInUp";
     newArea.setAttribute("data-wow-delay", "0.5s");
@@ -97,7 +134,7 @@ function showResult(matchedIds) { //呈現結果
 
     var area = document.getElementById("showArea");
 
-    for (let num of matchedIds) {
+    for (let num = 0; num < resultData.length ; num++) {
 
         let foodData = document.createElement("div"); //第一層
         foodData.className = "col-lg-4 col-md-6 portfolio-item";
@@ -107,12 +144,12 @@ function showResult(matchedIds) { //呈現結果
 
         let foodV3 = document.createElement("img"); //第三層-1
         foodV3.className = "img-fluid";
-        foodV3.src = restaurantsMap.get(num).image[0]; //food.get(foodKey).image;
+        foodV3.src = resultData[num].image[0]; //food.get(foodKey).image;
         foodV3.style.width = "100%";
 
         let foodName = document.createElement("div"); //第三層-2
         foodName.className = "pt-3";
-        foodName.appendChild(document.createTextNode(restaurantsMap.get(num).name));
+        foodName.appendChild(document.createTextNode(resultData[num].name));
 
         let foodName2 = document.createElement("p");
         foodName2.className = "text-primary mb-0";
@@ -124,11 +161,11 @@ function showResult(matchedIds) { //呈現結果
 
 
         let foodMenus = [];
-        for (let menuImg of restaurantsMap.get(num).image) {
+        for (let menuImg of resultData[num].image) {
             let foodMenu = document.createElement("a"); //第五層-1: 菜單
             foodMenu.href = menuImg; //restaurantsMap.get(foodKey).image;
             let foodMenuAtt = document.createAttribute("data-lightbox");
-            foodMenuAtt.value = restaurantsMap.get(num).name;
+            foodMenuAtt.value = resultData[num].name;
             foodMenu.setAttributeNode(foodMenuAtt);
             foodMenus.push(foodMenu);
         }
@@ -141,7 +178,7 @@ function showResult(matchedIds) { //呈現結果
 
         let foodAdd = document.createElement("a"); //第五層-2: 菜單
         foodAdd.className = "btn btn-lg-square btn-outline-light rounded-circle mx-1";
-        foodAdd.href = restaurantsMap.get(num).website;; //food.get(foodKey).website;
+        foodAdd.href = resultData[num].website;; //food.get(foodKey).website;
         foodAdd.target = "_blank";
 
         let addIcon = document.createElement("i"); //第六層-2: icon
@@ -167,7 +204,7 @@ function showResult(matchedIds) { //呈現結果
 
 
 document.getElementById("searchByName")
-    .addEventListener("keyup", function(e) {
+    .addEventListener("keyup", function (e) {
         if (e.keyCode === 13) {
             searchName();
         }
